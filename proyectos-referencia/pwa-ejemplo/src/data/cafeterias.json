@@ -1,0 +1,74 @@
+[
+  {
+    "id": "cafe-con-altura",
+    "nombre": "Cafe con Altura",
+    "zona": "Zona 10, Ciudad de Guatemala",
+    "categoria": "Para trabajar",
+    "especialidad": "Filtrado V60 de Huehuetenango",
+    "descripcion": "Un espacio amplio y silencioso en plena Zona Viva, pensado para trabajar o estudiar: internet rapido, muchos enchufes y mesas grandes. Sirven metodos de filtrado con grano de altura de Huehuetenango, notas citricas y cuerpo limpio.",
+    "imagenUrl": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80"
+  },
+  {
+    "id": "cuatro-grados-cafeina",
+    "nombre": "Cuatro Grados de Cafeina",
+    "zona": "Cuatro Grados Norte, Ciudad de Guatemala",
+    "categoria": "Brunch",
+    "especialidad": "Cold brew y pan de banano",
+    "descripcion": "Cafeteria de barrio creativo en Cuatro Grados Norte, ideal para un brunch de fin de semana. Su carta combina cold brew tirado en frio con pan de banano casero, huevos rancheros y opciones veganas.",
+    "imagenUrl": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
+  },
+  {
+    "id": "bodeguita-del-grano",
+    "nombre": "La Bodeguita del Grano",
+    "zona": "Antigua Guatemala, Sacatepequez",
+    "categoria": "Tostador",
+    "especialidad": "Tueste propio de Antigua",
+    "descripcion": "Micro-tostador en una casa colonial de Antigua. Tuestan cada lote a la vista del cliente con grano de fincas cercanas al Volcan de Agua. Puedes catar antes de comprar y llevarte la bolsa recien tostada.",
+    "imagenUrl": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80"
+  },
+  {
+    "id": "xela-coffee-lab",
+    "nombre": "Xela Coffee Lab",
+    "zona": "Zona 1, Quetzaltenango (Xela)",
+    "categoria": "Tostador",
+    "especialidad": "Lotes de origen de los Altos",
+    "descripcion": "Laboratorio de cafe en el corazon de Xela que trabaja microlotes de los Altos de Guatemala. Ofrecen catas guiadas, curso de barismo y una barra de metodos donde explican el origen de cada taza.",
+    "imagenUrl": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80"
+  },
+  {
+    "id": "esquina-de-barrio",
+    "nombre": "Esquina de Barrio",
+    "zona": "Zona 1, Centro Historico",
+    "categoria": "De barrio",
+    "especialidad": "Cafe de olla y refill sin fin",
+    "descripcion": "La tipica cafeteria de esquina del Centro Historico, sencilla y calida, donde los vecinos se conocen por nombre. Cafe de olla con panela, refill sin fin y pan dulce de la panaderia de al lado.",
+    "imagenUrl": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80"
+  },
+  {
+    "id": "toma-y-anda",
+    "nombre": "Toma y Anda",
+    "zona": "Zona 10, Ciudad de Guatemala",
+    "categoria": "Al paso",
+    "especialidad": "Espresso rapido para llevar",
+    "descripcion": "Barra de cafe al paso frente a las oficinas de la Zona 10. Espresso, cortado y latte para llevar en menos de tres minutos, con grano de Fraijanes. Perfecto para la carrera de la manana.",
+    "imagenUrl": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
+  },
+  {
+    "id": "brunch-and-beans",
+    "nombre": "Brunch & Beans",
+    "zona": "Cuatro Grados Norte, Ciudad de Guatemala",
+    "categoria": "Brunch",
+    "especialidad": "Flat white y waffles de la casa",
+    "descripcion": "Rincon luminoso y colorido para brunch tardio en Cuatro Grados Norte. Su flat white sedoso acompana waffles crujientes, bowls de fruta y mimosas. Mucho verde, buena luz y musica suave.",
+    "imagenUrl": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80"
+  },
+  {
+    "id": "fuego-lento",
+    "nombre": "Fuego Lento",
+    "zona": "Antigua Guatemala, Sacatepequez",
+    "categoria": "Para trabajar",
+    "especialidad": "Chemex de Atitlan y patio tranquilo",
+    "descripcion": "Cafe de trabajo en un patio empedrado de Antigua, con sombra, wifi estable y ritmo pausado. Preparan Chemex con grano de las orillas del Lago de Atitlan, dulce y floral, ideal para reuniones largas.",
+    "imagenUrl": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800&q=80"
+  }
+]

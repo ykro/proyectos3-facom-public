@@ -1,0 +1,24 @@
+{
+  "short_name": "Cafe",
+  "name": "Ruta del Cafe - Cafes de especialidad en Guatemala",
+  "description": "Guia de cafes de especialidad en Guatemala: para trabajar, brunch, de barrio, tostadores y al paso.",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#6D2E46",
+  "background_color": "#FDF6EC"
+}

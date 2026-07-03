@@ -1,0 +1,106 @@
+/* ============================================================
+   Sistema de diseño — Curso Proyectos III (paleta vino)
+   Todas las mock-apps comparten estos tokens y componentes.
+   Pantalla móvil: 390 x 844 (relación de un teléfono moderno).
+   ============================================================ */
+:root{
+  --crema:#FDF6EC;      /* fondo */
+  --vino:#6D2E46;       /* primario */
+  --terracota:#C84B31;  /* acento cálido */
+  --mostaza:#E3B23C;    /* acento / highlight */
+  --texto:#2B2B2B;      /* texto principal */
+  --verde:#4F772D;      /* badge extra */
+  --azul:#3A6B7E;       /* badge extra */
+  --muted:#8a7c70;      /* texto secundario */
+  --card:#FFFFFF;
+  --line:#EFE3D2;       /* separadores suaves */
+  --vino-08:#8a4a63;    /* vino más claro para degradados */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:390px;height:844px}
+body{
+  font-family:-apple-system,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+  background:var(--crema);
+  color:var(--texto);
+  overflow:hidden;
+  position:relative;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* --- barra de estado del teléfono --- */
+.statusbar{
+  height:34px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 18px;font-size:13px;font-weight:600;letter-spacing:.2px;
+}
+.statusbar .icons{display:flex;gap:6px;align-items:center;font-size:12px}
+
+/* --- app bar (Material 3 / web) --- */
+.appbar{
+  background:var(--vino);color:#fff;padding:14px 18px 16px;
+  border-bottom-left-radius:0;position:relative;
+}
+.appbar h1{font-size:26px;font-weight:800;letter-spacing:-.4px;line-height:1.05}
+.appbar .sub{font-size:13.5px;opacity:.82;margin-top:3px}
+.appbar .leadicon{font-size:22px}
+
+/* --- chips de filtro --- */
+.chips{display:flex;gap:9px;padding:14px 16px 6px;overflow:hidden}
+.chip{
+  white-space:nowrap;font-size:13.5px;font-weight:600;
+  padding:8px 15px;border-radius:999px;background:#fff;color:var(--vino);
+  border:1.5px solid var(--line);
+}
+.chip.active{background:var(--vino);color:#fff;border-color:var(--vino)}
+
+/* --- tarjetas --- */
+.list{padding:8px 16px 20px;display:flex;flex-direction:column;gap:14px}
+.card{
+  background:var(--card);border-radius:18px;overflow:hidden;
+  box-shadow:0 6px 18px rgba(109,46,70,.10);border:1px solid #f3eadc;
+}
+.card .thumb{height:120px;display:flex;align-items:center;justify-content:center;font-size:44px}
+.card .body{padding:13px 15px 15px}
+.card .row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.card h3{font-size:18px;font-weight:800;letter-spacing:-.3px}
+.card .meta{font-size:13px;color:var(--muted);margin-top:2px}
+.card .desc{font-size:13.5px;color:#5c5148;margin-top:8px;line-height:1.35}
+
+/* --- badges de categoría --- */
+.badge{font-size:11.5px;font-weight:800;color:#fff;padding:4px 10px;border-radius:999px;letter-spacing:.2px}
+.b-trabajar{background:var(--azul)}
+.b-brunch{background:var(--mostaza);color:#3a2c00}
+.b-barrio{background:var(--terracota)}
+.b-tostador{background:var(--verde)}
+.b-alpaso{background:var(--vino)}
+.pill{font-size:11.5px;font-weight:700;color:var(--vino);background:#f6ecdd;padding:4px 9px;border-radius:999px}
+
+/* --- FAB --- */
+.fab{
+  position:absolute;right:20px;bottom:26px;width:60px;height:60px;border-radius:20px;
+  background:var(--terracota);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-size:30px;box-shadow:0 10px 22px rgba(200,75,49,.42);
+}
+
+/* --- barra de navegación inferior --- */
+.navbar{
+  position:absolute;left:0;right:0;bottom:0;height:64px;background:#fff;
+  border-top:1px solid var(--line);display:flex;justify-content:space-around;align-items:center;
+}
+.navbar .item{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;color:var(--muted)}
+.navbar .item.active{color:var(--vino);font-weight:700}
+.navbar .item .ic{font-size:20px}
+
+/* --- thumbnails con degradado (placeholder de imagen) --- */
+.g1{background:linear-gradient(135deg,#6D2E46,#C84B31)}
+.g2{background:linear-gradient(135deg,#C84B31,#E3B23C)}
+.g3{background:linear-gradient(135deg,#4F772D,#3A6B7E)}
+.g4{background:linear-gradient(135deg,#3A6B7E,#6D2E46)}
+.g5{background:linear-gradient(135deg,#E3B23C,#C84B31)}
+.g6{background:linear-gradient(135deg,#6D2E46,#3A6B7E)}
+
+/* --- estados / util --- */
+.section-title{padding:18px 16px 6px;font-size:14px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
+.empty{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 30px;color:var(--muted)}
+.empty .big{font-size:56px;margin-bottom:12px}
+.btn{background:var(--vino);color:#fff;font-weight:800;font-size:15px;padding:14px;border-radius:14px;text-align:center}
+.btn-2{background:#fff;color:var(--vino);border:1.5px solid var(--vino)}

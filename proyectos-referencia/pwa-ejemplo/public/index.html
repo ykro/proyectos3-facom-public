@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--
+      CONCEPTO: Color de tema de la PWA
+      QUE HACE: Define el color de la barra del navegador/sistema cuando la app esta instalada.
+      POR QUE: Da identidad visual a la app instalada (usa el color de marca del curso).
+    -->
+    <meta name="theme-color" content="#6D2E46" />
+    <meta
+      name="description"
+      content="Ruta del Cafe: guia de cafes de especialidad en Guatemala."
+    />
+
+    <title>Ruta del Cafe</title>
+
+    <!--
+      CONCEPTO: Tailwind CSS por CDN
+      QUE HACE: Carga Tailwind directamente desde internet, sin instalar nada.
+      POR QUE: Para un MVP/demo educativo es la forma mas rapida de usar Tailwind.
+               En un proyecto de produccion se instalaria Tailwind con npm.
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--
+      CONCEPTO: Configuracion de la paleta de marca en Tailwind
+      QUE HACE: Agrega colores con nombre (marca-fondo, marca-vino, etc.) para
+               usarlos en las clases de Tailwind como bg-marca-vino o text-marca-texto.
+      POR QUE: Mantiene la identidad visual consistente con el resto del curso.
+    -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "marca-fondo": "#FDF6EC",
+              "marca-vino": "#6D2E46",
+              "marca-naranja": "#C84B31",
+              "marca-amarillo": "#E3B23C",
+              "marca-texto": "#2B2B2B",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!--
+      CONCEPTO: Enlace al manifest de la PWA
+      QUE HACE: Le dice al navegador donde estan los metadatos para instalar la app.
+      POR QUE: Sin el manifest, el navegador no ofrece "Agregar a pantalla de inicio".
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      CONCEPTO: Registro del Service Worker
+      QUE HACE: Registra el archivo service-worker.js que permite cache offline.
+      POR QUE: Un Service Worker es el corazon de una PWA: permite que la app
+               funcione sin conexion y se comporte como una app instalada.
+               Se registra solo cuando el navegador lo soporta.
+    -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("%PUBLIC_URL%/service-worker.js")
+            .then(() => console.log("Service Worker registrado"))
+            .catch((error) =>
+              console.log("Error al registrar Service Worker:", error)
+            );
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .appbar{display:flex;align-items:flex-start;gap:12px}
+  .appbar .cup{font-size:30px;line-height:1}
+  body{overflow-y:auto}
+  .form{margin:14px 16px 4px;background:var(--card);border-radius:18px;
+    box-shadow:0 6px 18px rgba(109,46,70,.10);border:1px solid #f3eadc;padding:16px 15px}
+  .form h2{font-size:16px;font-weight:800;letter-spacing:-.2px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .field{background:#fff;border:1.5px solid var(--line);border-radius:13px;padding:14px;
+    font-size:14px;color:var(--texto);margin-bottom:10px;display:flex;align-items:center;justify-content:space-between}
+  .field .ph{color:var(--muted)}
+  .field.filled .ph{color:var(--texto);font-weight:600}
+  .form .btn{margin-top:4px}
+  .list{padding-top:2px;padding-bottom:20px}
+  .card .thumb{height:96px}
+  .card h3{display:flex;align-items:center;gap:8px}
+</style></head>
+<body>
+  <div class="statusbar"><span>9:41</span><span class="icons">📶 &nbsp;🔋</span></div>
+  <div class="appbar">
+    <div class="cup">🍲</div>
+    <div>
+      <h1>Recetario Rápido</h1>
+      <div class="sub">Tus recetas, guardadas en la nube</div>
+    </div>
+  </div>
+
+  <div class="form">
+    <h2>📝 Nueva receta</h2>
+    <div class="field filled"><span class="ph">Pepián de pollo</span><span>✏️</span></div>
+    <div class="field"><span class="ph">Tiempo de preparación</span><span class="pill">45 min</span></div>
+    <div class="field"><span class="ph">Descripción corta…</span></div>
+    <div class="btn">Guardar receta</div>
+  </div>
+
+  <div class="section-title">Mis recetas</div>
+  <div class="list">
+    <div class="card">
+      <div class="thumb g2">🥑</div>
+      <div class="body">
+        <div class="row"><h3>Guacamol casero</h3><span class="pill">15 min</span></div>
+        <div class="desc">Aguacate, tomate, cebolla y cilantro picados. Un chorrito de limón y sal al gusto.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="thumb g1">🍗</div>
+      <div class="body">
+        <div class="row"><h3>Jocón verde</h3><span class="pill">50 min</span></div>
+        <div class="desc">Pollo en recado de miltomate, cilantro y chile verde. Se sirve con arroz blanco.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="thumb g5">🫓</div>
+      <div class="body">
+        <div class="row"><h3>Tamalitos de chipilín</h3><span class="pill">1 h 20 min</span></div>
+        <div class="desc">Masa suave con hojas de chipilín, envueltos en tusa y cocidos al vapor.</div>
+      </div>
+    </div>
+  </div>
+</body></html>
