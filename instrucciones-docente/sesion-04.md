@@ -23,7 +23,7 @@ Que el estudiante entienda cuándo conviene una app **nativa**, cree una **app n
 
 ### Bloque 1 — Repaso del Proyecto 1 y PWA vs nativo (~18 min)
 
-1. Portada del deck. Repaso: el Proyecto 1 (PWA) quedó completo; recuérdales que la defensa es en la sesión 5.
+1. Portada del deck. Repaso: el Proyecto 1 (PWA) quedó completo; recuérdales que el **examen parcial (escrito en línea)** y la **entrega del Proyecto 1** son en la sesión 5.
 
 2. Explica con las slides **PWA vs nativo**: una PWA vive en el navegador y se instala; una app nativa se instala desde una tienda y accede mejor a capacidades del teléfono (cámara, notificaciones, rendimiento). Conecta con **Tarea 4 (PWA vs nativo)**.
 
@@ -114,7 +114,7 @@ Crea una app nativa de Android usando Kotlin y Jetpack Compose (Material 3) llam
 19. Asigna y recuerda el examen:
     - **Tarea 4 — Investigación PWA vs nativo.**
     - **Laboratorio 4 — App nativa en el emulador del navegador** (o instalada en el teléfono) con la bitácora.
-    - **Recordatorio: Examen Parcial en la próxima sesión (5)** — defensa del Proyecto 1 (PWA "Ruta del Café"). Que lleguen con la URL publicada y sus prompts.
+    - **Recordatorio: Examen Parcial en la próxima sesión (5)** — examen **escrito en línea** + entrega del Proyecto 1 (PWA "Ruta del Café"). Que lleguen con la URL publicada y sus prompts.
 
 20. Adelanta que tras el parcial seguimos con login, datos por usuario y fotos (sesión 6). Cierra.
 

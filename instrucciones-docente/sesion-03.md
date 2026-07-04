@@ -111,7 +111,7 @@ Crea una aplicación web usando React con Tailwind CSS llamada "Recetario Rápid
 19. Asigna y anuncia el examen:
     - **Tarea 3 — Definir el modelo de datos de su app** (colección + campos en inglés).
     - **Laboratorio 3 — PWA con datos persistentes, instalable.**
-    - **Examen Parcial (sesión 5):** entrega y **defensa del Proyecto 1**. Pídeles tener la URL publicada y sus prompts guardados.
+    - **Examen Parcial (sesión 5):** examen **escrito en línea** + **entrega en línea del Proyecto 1**. Pídeles tener la URL publicada y sus prompts guardados.
 
 20. Sugiere responder el quiz `quiz/u1-pwa-quiz.md`. Adelanta la sesión 4 (desarrollo nativo). Cierra.
 
@@ -121,4 +121,4 @@ Crea una aplicación web usando React con Tailwind CSS llamada "Recetario Rápid
 
 - Aclara que los **checkpoints guardan código, no datos**: si regresan a un checkpoint, los registros creados en Firestore siguen ahí.
 - Si el deploy a Cloud Run es lento o falla en clase, no bloquees el laboratorio: que avancen con la PWA instalable en preview y publiquen después con la guía.
-- Recuérdales guardar todos sus prompts para la defensa del Proyecto 1.
+- Recuérdales guardar todos sus prompts para la bitácora y la entrega del Proyecto 1.

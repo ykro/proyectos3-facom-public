@@ -1,66 +1,50 @@
-# Sesión 5 — Examen Parcial: entrega y defensa del Proyecto 1 (PWA)
+# Sesión 5 — Examen Parcial escrito en línea (sesiones 1–4)
 
 **Curso:** Proyectos III — Diseño de aplicaciones móviles
 **Duración:** 90 minutos · **Modalidad:** en línea · **Mismo material para Sección 1 (lunes) y Sección 2 (miércoles)**
 **Tipo:** Evaluación (sin deck de contenido)
-**Se evalúa:** Proyecto 1 — PWA propia del estudiante (basada en "Ruta del Café")
-**Valor:** Examen Parcial = 20 puntos (según la evaluación del curso)
+**Se evalúa:** Examen Parcial escrito (teoría + práctica) sobre las sesiones 1–4
+**Valor:** Examen Parcial = 20 puntos (según la evaluación del curso), **100 % escrito en línea**
+
+> El Examen Parcial es **totalmente escrito y en línea** — no hay defensa ni presentación en vivo. El **Proyecto 1 (PWA)** se entrega en línea y se evalúa por separado dentro de *Proyectos* (ver rúbrica de entrega abajo), no como parte del examen.
 
 ## Objetivo de la sesión
 
-Evaluar de forma práctica el **Proyecto 1**: cada estudiante presenta y defiende su PWA instalable con datos. Esta es una **evaluación de desempeño**, no un examen escrito.
+Aplicar el **Examen Parcial escrito en línea**: teoría y práctica escrita sobre prompting, UI/UX móvil, modelo de datos y PWA instalable. Evalúa el **criterio de diseño y la dirección de la IA**, no el código.
 
 ## Preparación previa
 
-- Avisa con anticipación el orden de presentaciones (lista o sorteo) y el tiempo por estudiante.
-- Pide que lleguen con: la **URL publicada** (Cloud Run) abierta, la app **instalada en su teléfono** si pudieron, y su **bitácora de prompts**.
-- Ten lista la rúbrica (abajo) en una hoja de cálculo para calificar en vivo.
+- Arma el examen en línea (formulario/plataforma institucional) a partir de `examenes/examen-parcial-estudiante.md` (solo preguntas). La clave y las bandas están en `examenes/examen-parcial.md` (repo privado).
+- Define ventana de tiempo, reglas (individual, libro abierto de sus propias notas/bitácora si así lo decides) e instrucciones de integridad académica.
+- Fija la **fecha límite de entrega del Proyecto 1** (PWA): URL publicada (Cloud Run) o app instalable + **bitácora de prompts**, entregada en línea.
 
 ## Cómo organizar el tiempo (90 min)
 
-- **(~8 min)** Bienvenida, recordatorio del formato y la rúbrica.
-- **(~72 min)** Defensas individuales. Con grupos grandes, calcula **~5–6 min por estudiante** (3 min de demo + 2–3 min de preguntas). Si el grupo es muy numeroso, divide en dos bloques o usa defensas en paralelo por sala.
-- **(~10 min)** Cierre, retroalimentación general del grupo y anuncio de la sesión 6.
+- **(~10 min)** Bienvenida, instrucciones del examen en línea, reglas e integridad académica.
+- **(~70 min)** **Examen escrito en línea** individual (teoría + práctica). Ajusta la duración a tu instrumento.
+- **(~10 min)** Cierre: recordatorio de la fecha de entrega del Proyecto 1 y anuncio de la sesión 6.
+
+> *Si prefieres que el examen se resuelva fuera del horario de clase,* usa la sesión para resolver dudas de la entrega del Proyecto 1 y abre el examen en línea con una ventana propia.
 
 ---
 
-## Qué pedir en la defensa (cada estudiante)
+## Rúbrica del Examen Parcial (20 puntos) — 100 % escrito en línea
 
-1. **Presentar su app (1 min):** qué hace, a quién sirve, su identidad visual (nombre, colores, tono).
-2. **Demostrarla en vivo (2 min):**
-   - Mostrar la **lista de tarjetas**.
-   - Usar el **filtro por categoría** (incluyendo "Todas").
-   - Abrir la **vista de detalle** y regresar.
-   - **Crear un registro nuevo** y mostrar que aparece sin recargar (tiempo real, Firestore).
-   - Mostrar que es **instalable como PWA** (ícono de instalar o app en el teléfono).
-3. **Explicar su proceso (1 min):** mostrar 1–2 prompts clave de su bitácora y explicar una decisión de diseño o un problema que resolvió (uso de checkpoints, View diff, modo de anotación, regla de 2 strikes).
-
-### Preguntas sugeridas para la defensa
-
-- ¿Por qué elegiste esa colección y esos campos? ¿Por qué los nombres van en inglés?
-- ¿Qué cambiarías de tu prompt inicial si lo volvieras a hacer?
-- ¿Cómo resolviste un cambio que no salió a la primera?
-- ¿Cómo se ve tu app en un teléfono pequeño?
+Examen individual en línea con **teoría** (opción múltiple, V/F razonado, respuesta corta) y **práctica escrita** (redactar un prompt Funcionalidad/Interfaz, diseñar un modelo de datos, escribir un prompt de rescate, criticar/mejorar una interfaz). El instrumento completo con clave y bandas está en `examenes/examen-parcial.md` (repo privado del docente). El examen es de 100 pts (Teoría 40 % / Práctica 60 %) y **se convierte íntegramente a los 20 puntos del Examen Parcial**.
 
 ---
 
-## Rúbrica del Examen Parcial (20 puntos)
+## Rúbrica de entrega del Proyecto 1 (cuenta en *Proyectos*, no en el examen)
 
-El parcial tiene **dos componentes**: un **escrito en línea** (teoría + práctica) y la **defensa** del proyecto.
+El **Proyecto 1 (PWA propia)** se entrega **en línea** (URL publicada o app instalable + **bitácora de prompts** + capturas). Se evalúa sobre lo entregado —**no es una defensa en vivo**— y sus puntos cuentan dentro de la categoría **Proyectos** del curso. Reparte los puntos que asignes al Proyecto 1 con estos pesos relativos:
 
-### Componente 1 — Escrito en línea (8 puntos)
-
-Examen individual en línea con teoría (opción múltiple, V/F razonado, respuesta corta) y práctica escrita (redactar un prompt Funcionalidad/Interfaz, diseñar un modelo de datos, escribir un prompt de rescate, criticar una interfaz). El instrumento completo con clave y bandas está en `examenes/examen-parcial.md` (repo privado del docente). El examen es de 100 pts (Teoría 40 % / Práctica 60 %) y **se convierte a estos 8 puntos**.
-
-### Componente 2 — Defensa del Proyecto 1 (12 puntos)
-
-| Criterio | Qué se evalúa | Puntos |
-|----------|---------------|--------|
+| Criterio | Qué se evalúa | Peso |
+|----------|---------------|------|
 | **Identidad visual y UX** | Mobile-first, identidad propia (no la de referencia), jerarquía, contraste/**accesibilidad AA**, estados. | 4 |
 | **Proceso y dirección de IA** | **Bitácora de prompts** (prompts clave, una decisión de diseño, un problema resuelto); criterio al dirigir a la IA. | 2 |
 | **Funcionalidad** | Lista de tarjetas, filtro por categoría y vista de detalle funcionan; navegación correcta. | 3 |
 | **Datos + PWA instalable** | Datos en Firestore en tiempo real (`onSnapshot`) y app instalable (manifest/íconos/service worker; idealmente en Cloud Run). | 3 |
-| **Total defensa** | | **12** |
+| **Total** | | **12** |
 
 > **Bandas por criterio:** califica cada criterio como **Excelente** (cumple todo con calidad), **Aceptable** (cumple lo esencial con fallas menores) o **Insuficiente** (falta lo esencial), y asigna el puntaje dentro de su rango.
 >
@@ -68,15 +52,15 @@ Examen individual en línea con teoría (opción múltiple, V/F razonado, respue
 
 ## Cómo dar retroalimentación
 
-- **Inmediata y específica:** justo al terminar cada defensa, di **una fortaleza concreta** y **una mejora accionable** (ejemplo: "el filtro funciona muy bien; trabaja el contraste del texto sobre las tarjetas").
+- **Del examen escrito:** comparte la clave y las bandas después de calificar; señala patrones comunes de error del grupo.
+- **De la entrega del Proyecto 1:** por escrito sobre lo entregado, con **una fortaleza concreta** y **una mejora accionable** (ejemplo: "el filtro funciona muy bien; trabaja el contraste del texto sobre las tarjetas").
 - **Orientada a diseño y a dirección de IA:** valora el criterio de UX y la calidad de los prompts, no el código.
 - **Constructiva:** enmarca las mejoras como pasos hacia el Proyecto Final.
-- **Registro:** anota la nota por criterio en el momento; comparte la retroalimentación escrita después si tu institución lo requiere.
 
 ---
 
 ## Notas
 
-- Si una app no carga en vivo (problema de red o de deploy), pide la versión en preview de AI Studio como respaldo y no penalices el contratiempo técnico si la funcionalidad está.
-- Verifica que cada quien defienda **su propia app**, no la de referencia ("Ruta del Café"). Coteja con su bitácora de prompts.
-- Cierra recordando que el Proyecto Final (app nativa) es el siguiente gran entregable y que mucho de lo evaluado hoy aplica igual ahí.
+- Verifica que cada quien entregue **su propia app**, no la de referencia ("Ruta del Café"). Coteja con su bitácora de prompts.
+- Si una app no carga (problema de red o de deploy), acepta la versión en preview de AI Studio o capturas como respaldo y no penalices el contratiempo técnico si la funcionalidad está.
+- Cierra recordando que el Proyecto Final (app nativa) es el siguiente gran entregable y que mucho de lo aprendido hoy aplica igual ahí.

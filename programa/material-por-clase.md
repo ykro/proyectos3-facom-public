@@ -19,14 +19,14 @@ Documento de apoyo para **preparar las clases** de *Proyectos III — Diseño de
 | 2 | Idea → interfaz y prototipo | PWA | `sesion-02.pptx` | §2 + Personalización | " | — | Adopta un Peludo |
 | 3 | Datos y PWA instalable | PWA | `sesion-03.pptx` | §3 | " | `u1-pwa` | Recetario Rápido |
 | 4 | Nativo I: fundamentos en AI Studio | Nativa | `sesion-04.pptx` | `proyecto-final-nativo.md` §1 | `prompts/proyecto-final` | — | Mi Estantería |
-| 5 | **Examen Parcial** (defensa PWA) | PWA | — | — | — | — | — |
+| 5 | **Examen Parcial** (escrito en línea + entrega PWA) | PWA | — | — | — | — | — |
 | 6 | Nativo II: login y datos por usuario | Nativa | `sesion-06.pptx` | §2 | " | — | Diario de Viajes |
 | 7 | Nativo III: cámara y pulido | Nativa | `sesion-07.pptx` | §3 + Personalización | " | `u2-nativo` | Foto del Día |
 | 8 | Distribución y marketing | — | `sesion-08.pptx` | — | — | `u3` | — (mini-taller) |
 | 9 | Portafolio, pitch, empleabilidad | — | `sesion-09.pptx` | — | — | `u3` | — (mini-taller) |
 | 10 | **Examen Final / Demo Day** | Nativa | — | — | — | — | — |
 
-> Las sesiones 5 y 10 son exámenes (sin deck). Las 8 y 9 son ligeras (charla + mini-taller). La rúbrica y el guion de defensa están en `instrucciones-docente/sesion-05.md` y `sesion-10.md`.
+> Las sesiones 5 y 10 son exámenes **escritos en línea** (sin deck, sin defensa). Las 8 y 9 son ligeras (charla + mini-taller). La rúbrica del examen y la rúbrica de entrega del proyecto están en `instrucciones-docente/sesion-05.md` y `sesion-10.md`.
 
 ---
 
@@ -54,8 +54,8 @@ Para cada sesión, el guion paso a paso (con tiempos por bloque) está en `instr
 - **Preparar (clave):** verificar en vivo que AI Studio genera **app nativa (Kotlin/Compose)** y que el **emulador del navegador** + **"Install on Device"** funcionan; tener un **teléfono Android** (modo desarrollador + depuración USB) y **cable USB** para demostrar la instalación.
 - **Tareas:** Tarea 4 (PWA vs nativo), Laboratorio 4 (app nativa con la galería/bitácora base).
 
-### Sesión 5 — Examen Parcial (defensa del Proyecto 1 / PWA)
-- **Listo:** rúbrica y guion de defensa en `instrucciones-docente/sesion-05.md`.
+### Sesión 5 — Examen Parcial escrito en línea + entrega del Proyecto 1 (PWA)
+- **Listo:** rúbrica del examen escrito y rúbrica de entrega del Proyecto 1 en `instrucciones-docente/sesion-05.md`.
 - **Preparar:** que lleguen con la **URL de su PWA publicada (Ruta del Café / su idea)** y su bitácora de prompts.
 
 ### Sesión 6 — Desarrollo nativo II: login y datos por usuario
@@ -77,7 +77,7 @@ Para cada sesión, el guion paso a paso (con tiempos por bloque) está en `instr
 - **Listo:** deck, mini-taller de caso de portafolio + pitch, quiz `u3`.
 - **Preparar:** ejemplos de pitch; ensayo general del Demo Day.
 
-### Sesión 10 — Examen Final / Demo Day (defensa del Proyecto Final)
+### Sesión 10 — Examen Final escrito en línea + Demo Day (showcase/entrega del Proyecto Final)
 - **Listo:** rúbrica y guion en `instrucciones-docente/sesion-10.md`.
 - **Preparar:** que lleguen con **Bitácora Visual (o su idea)** en el emulador del navegador **o instalada en el teléfono (Install on Device)**, login + cámara probados, pitch listo, capturas de respaldo.
 

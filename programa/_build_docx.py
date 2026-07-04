@@ -131,9 +131,11 @@ for idx, t in zip([31, 32, 33, 34, 35], acts):
 # --- Observaciones (2 existentes + 2 nuevas) ---
 last = P[44]
 for t in [
-    "El Examen Parcial consiste en la entrega y defensa del Proyecto 1 (PWA instalable con "
-    "datos); el Examen final consiste en el Demo Day: defensa del Proyecto Final "
-    "(aplicación nativa) junto con el portafolio y el pitch.",
+    "Los exámenes Parcial y Final son 100 % escritos y en línea (teoría + práctica), sin "
+    "defensa: los 100 puntos de cada instrumento se convierten íntegramente a los 20 puntos "
+    "del examen. Los proyectos (PWA y app nativa + portafolio + pitch) se entregan en línea "
+    "y se evalúan dentro de Proyectos; el Demo Day de la sesión 10 es un showcase de "
+    "celebración y entrega, no una defensa calificada.",
     "Las herramientas utilizadas (Google AI Studio y Firebase) son gratuitas y se usan "
     "desde el navegador; solo se requiere una cuenta de Google. Para probar la app nativa "
     "en un teléfono físico basta un cable USB (AI Studio la instala desde Chrome).",
@@ -192,7 +194,7 @@ set_row(4, "Semana 4 (27 de julio)",
     "- Cómo llevar la identidad y la UX a nativo")
 
 set_exam_row(5, "Semana 5 (3 de agosto)",
-    "Examen parcial (sesiones 1-4): entrega y defensa del Proyecto 1 (PWA instalable con datos)")
+    "Examen Parcial escrito en línea (sesiones 1-4): teoría + práctica escrita. Entrega en línea del Proyecto 1 (PWA instalable con datos)")
 
 set_row(6, "Semana 6 (10 de agosto)",
     "Desarrollo nativo II: login y datos por usuario",
@@ -224,7 +226,7 @@ set_row(9, "Semana 9 (31 de agosto)",
     "- Ética y accesibilidad\n- Empleabilidad en el mercado actual")
 
 set_exam_row(10, "Semana 10 (7 de septiembre)",
-    "Examen final / Demo Day (sesiones 5-8): defensa del Proyecto Final (app nativa) + portafolio + pitch")
+    "Examen Final escrito en línea (sesiones 5-9): teoría + práctica escrita. Demo Day: showcase y entrega en línea del Proyecto Final (app nativa) + portafolio + pitch")
 
 # --- Ensanchar la columna "Tema" para legibilidad (quitando ancho a "Docente") ---
 NEW_W = [1600, 2300, 2200, 2140]  # twips; total = 8240 (igual al original)

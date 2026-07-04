@@ -616,7 +616,7 @@ DECKS = [
             "tareas": [
                 "Tarea 3: define el modelo de datos de tu app",
                 "Laboratorio 3: PWA con datos persistentes, instalable",
-                "Examen Parcial (sesión 5): defensa del Proyecto 1",
+                "Examen Parcial (sesión 5): escrito en línea + entrega del Proyecto 1",
             ],
         },
     },
@@ -694,7 +694,7 @@ DECKS = [
             "tareas": [
                 "Tarea 4: investigación PWA vs nativo",
                 "Laboratorio 4: app nativa en el emulador del navegador con su cuadrícula",
-                "Examen Parcial en la próxima sesión: defensa del Proyecto 1",
+                "Examen Parcial en la próxima sesión: escrito en línea + entrega del Proyecto 1",
             ],
         },
     },
@@ -838,7 +838,7 @@ DECKS = [
             "tareas": [
                 "Laboratorio 6: app nativa pulida con una capacidad del teléfono",
                 "Reúne capturas y notas para tu portafolio",
-                "Demo Day (sesión 10): defensa del Proyecto Final",
+                "Sesión 10: Examen Final escrito en línea + Demo Day (entrega del Proyecto Final)",
             ],
         },
     },
@@ -977,7 +977,7 @@ DECKS = [
             "tareas": [
                 "Termina tu caso de portafolio y tu guion de pitch",
                 "Ensaya con emulador o teléfono listo",
-                "Demo Day (sesión 10): defensa del Proyecto Final + pitch",
+                "Sesión 10: Examen Final escrito en línea + Demo Day (entrega + pitch)",
             ],
         },
     },

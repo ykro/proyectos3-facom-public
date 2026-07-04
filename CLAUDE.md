@@ -34,7 +34,7 @@ Material del curso **Proyectos III** (Licenciatura en Comunicación y Diseño, U
 - `instrucciones-docente/` — guion sesión por sesión (README + sesion-01..10). Sesiones 5 y 10 son exámenes; 8 y 9 son charlas/mini-taller.
 - `slides/` — `generar_slides.py` genera 8 `.pptx` (sesiones 1–4, 6–9). Regenerar: `uv run --with python-pptx python slides/generar_slides.py`.
 - `demos/` — mini-apps que el docente construye en vivo (mock-ups HTML + capturas), referenciadas desde `instrucciones-docente/`.
-- Los **quizzes** (u1-pwa, u2-nativo-datos, u3-distribucion-portafolio) y los **exámenes escritos** (parcial y final, teoría + práctica, con claves) viven en el **repositorio privado del docente**, no en este repo público. Aquí quedan las **rúbricas de defensa** (`instrucciones-docente/sesion-05.md`, `sesion-10.md`).
+- Los **quizzes** (u1-pwa, u2-nativo-datos, u3-distribucion-portafolio) y los **exámenes escritos** (parcial y final, teoría + práctica, con claves; **100 % escritos en línea, sin defensa**) viven en el **repositorio privado del docente**, no en este repo público. Aquí quedan las **rúbricas del examen y de entrega del proyecto** (`instrucciones-docente/sesion-05.md`, `sesion-10.md`).
 - `programa/` — `programa-proyectos-iii-2026.md` (fuente de verdad); `_build_docx.py` regenera el `.docx` (`uv run --with python-docx python programa/_build_docx.py`); `material-por-clase.md` (inventario/checklist por clase).
 - `proyectos-referencia/` — pwa-ejemplo (Ruta del Café) y nativo-ejemplo (Bitácora Visual): referencia visual, no se compilan.
 

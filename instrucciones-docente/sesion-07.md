@@ -94,7 +94,7 @@ Que el estudiante agregue una **capacidad del teléfono** (la **cámara**), apre
 
 17. Asigna y anuncia:
     - **Laboratorio 6 — App nativa con una capacidad del teléfono, pulida.**
-    - Recuérdales que las **sesiones 8 y 9** son de distribución, portafolio y pitch (mini-talleres), y que el **Demo Day (sesión 10)** es la defensa final del Proyecto Final.
+    - Recuérdales que las **sesiones 8 y 9** son de distribución, portafolio y pitch (mini-talleres), y que la **sesión 10** es el **Examen Final escrito en línea** + **Demo Day** (showcase y entrega del Proyecto Final).
 
 18. Sugiere empezar a reunir capturas y notas para su portafolio. Cierra.
 

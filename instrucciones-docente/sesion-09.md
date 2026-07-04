@@ -68,7 +68,7 @@ Que el estudiante arme el **caso de portafolio** de su Proyecto Final y prepare 
 
 12. Asigna y prepara el examen final:
     - Terminar el **caso de portafolio** y el **guion de pitch** (entran al Demo Day).
-    - **Recordatorio: Demo Day (sesión 10)** — defensa del Proyecto Final + portafolio + pitch. Que lleguen con la app lista en el emulador del navegador o instalada en el teléfono (Install on Device), y ya probada.
+    - **Recordatorio: sesión 10** — Examen Final **escrito en línea** + **Demo Day** (showcase y entrega del Proyecto Final + portafolio + pitch). Que lleguen con la app lista en el emulador del navegador o instalada en el teléfono (Install on Device), y ya probada.
 
 13. Da consejos finales de logística para el Demo Day en línea (probar pantalla compartida, audio, tener la app abierta en la vista previa o en el teléfono). Cierra.
 

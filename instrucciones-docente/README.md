@@ -28,14 +28,14 @@ El curso se imparte en **dos secciones con contenido idéntico**:
 | 2 | De idea a interfaz y prototipo | Contenido + Lab 2 | `slides/sesion-02.pptx` |
 | 3 | Datos y app instalable (PWA) | Contenido + Lab 3 | `slides/sesion-03.pptx` |
 | 4 | Desarrollo nativo I: fundamentos con IA | Contenido + Lab 4 | `slides/sesion-04.pptx` |
-| 5 | **Examen Parcial:** entrega y defensa del Proyecto 1 (PWA) | Evaluación | — |
+| 5 | **Examen Parcial** (escrito en línea) + entrega del Proyecto 1 (PWA) | Evaluación | — |
 | 6 | Desarrollo nativo II: producto real | Contenido + Lab 5 | `slides/sesion-06.pptx` |
 | 7 | Desarrollo nativo III: pulido y capacidades del teléfono | Contenido + Lab 6 | `slides/sesion-07.pptx` |
 | 8 | Distribución y marketing de apps (ligera, posible invitado) | Charla + mini-taller | `slides/sesion-08.pptx` |
 | 9 | Portafolio, pitch y empleabilidad (ligera, posible invitado) | Charla + mini-taller | `slides/sesion-09.pptx` |
-| 10 | **Examen Final / Demo Day:** defensa del Proyecto Final + portafolio + pitch | Evaluación | — |
+| 10 | **Examen Final** (escrito en línea) + Demo Day: entrega del Proyecto Final + portafolio + pitch | Evaluación | — |
 
-Las sesiones **5 y 10 son exámenes** (sin deck de contenido): en sus archivos encontrarás la **rúbrica, qué pedir en la defensa y cómo dar retroalimentación**.
+Las sesiones **5 y 10 son exámenes** (sin deck de contenido): el examen es **100 % escrito en línea** (no hay defensa). En sus archivos encontrarás la **rúbrica del examen escrito, la rúbrica de entrega del proyecto (cuenta en *Proyectos*) y cómo dar retroalimentación**.
 
 Las sesiones **8 y 9 son ligeras**: sus archivos traen la **estructura de charla, qué hacer si hay invitado y el guion del mini-taller**.
 
