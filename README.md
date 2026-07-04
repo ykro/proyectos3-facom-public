@@ -60,7 +60,7 @@ No necesitas saber programar. Tu trabajo es **diseñar** la app —con criterio 
 4. Copia los prompts de la guía y pégalos en AI Studio.
 5. Verifica el resultado en cada paso (vista previa).
 6. Cuando termines la app de referencia, ve a la sección **"Tu proyecto"** al final de cada guía y aplica lo aprendido a **tu propia idea de app**. Eso es lo que entregas.
-7. El docente aplica un breve **quiz de verificación** al cerrar cada unidad (los quizzes viven en el repositorio privado del docente).
+7. El docente aplica un breve **quiz de verificación** al cerrar cada unidad, y los **exámenes escritos en línea** (parcial y final, teoría + práctica). Los quizzes y los exámenes —con sus claves— viven en el **repositorio privado del docente**; en este repo público están las **rúbricas de defensa** (en `instrucciones-docente/`) y las guías del estudiante.
 
 ### Para el docente
 

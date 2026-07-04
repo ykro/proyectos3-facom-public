@@ -44,18 +44,27 @@ Evaluar de forma práctica el **Proyecto 1**: cada estudiante presenta y defiend
 
 ---
 
-## Rúbrica breve (20 puntos)
+## Rúbrica del Examen Parcial (20 puntos)
+
+El parcial tiene **dos componentes**: un **escrito en línea** (teoría + práctica) y la **defensa** del proyecto.
+
+### Componente 1 — Escrito en línea (8 puntos)
+
+Examen individual en línea con teoría (opción múltiple, V/F razonado, respuesta corta) y práctica escrita (redactar un prompt Funcionalidad/Interfaz, diseñar un modelo de datos, escribir un prompt de rescate, criticar una interfaz). El instrumento completo con clave y bandas está en `examenes/examen-parcial.md` (repo privado del docente). El examen es de 100 pts (Teoría 40 % / Práctica 60 %) y **se convierte a estos 8 puntos**.
+
+### Componente 2 — Defensa del Proyecto 1 (12 puntos)
 
 | Criterio | Qué se evalúa | Puntos |
 |----------|---------------|--------|
-| **Funcionalidad** | Lista de tarjetas, filtro por categoría y vista de detalle funcionan; navegación correcta. | 5 |
-| **Datos en Firestore** | Datos en la nube; crear un registro lo refleja en tiempo real (`onSnapshot`); modelo de datos coherente. | 5 |
-| **PWA instalable** | Manifest, íconos y service worker; la app se instala (idealmente publicada en Cloud Run). | 4 |
-| **Identidad visual y UX** | Diseño mobile-first, identidad propia (no la de referencia tal cual), contraste y jerarquía cuidados. | 4 |
-| **Proceso y dominio** | Explica su proceso con prompts; demuestra criterio al dirigir a la IA. | 2 |
-| **Total** | | **20** |
+| **Identidad visual y UX** | Mobile-first, identidad propia (no la de referencia), jerarquía, contraste/**accesibilidad AA**, estados. | 4 |
+| **Proceso y dirección de IA** | **Bitácora de prompts** (prompts clave, una decisión de diseño, un problema resuelto); criterio al dirigir a la IA. | 2 |
+| **Funcionalidad** | Lista de tarjetas, filtro por categoría y vista de detalle funcionan; navegación correcta. | 3 |
+| **Datos + PWA instalable** | Datos en Firestore en tiempo real (`onSnapshot`) y app instalable (manifest/íconos/service worker; idealmente en Cloud Run). | 3 |
+| **Total defensa** | | **12** |
 
-> *Penalización sugerida:* entregar la app de referencia "Ruta del Café" sin personalizar (misma idea, nombre y datos) baja el criterio de **Identidad visual y UX** a la mitad, porque el entregable pide su **propia idea de app**.
+> **Bandas por criterio:** califica cada criterio como **Excelente** (cumple todo con calidad), **Aceptable** (cumple lo esencial con fallas menores) o **Insuficiente** (falta lo esencial), y asigna el puntaje dentro de su rango.
+>
+> *Penalización sugerida:* entregar la app de referencia "Ruta del Café" sin personalizar (misma idea, nombre y datos) baja **Identidad visual y UX** a la mitad, porque el entregable pide su **propia idea de app**.
 
 ## Cómo dar retroalimentación
 

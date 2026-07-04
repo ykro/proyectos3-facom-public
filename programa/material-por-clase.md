@@ -97,6 +97,36 @@ Ordenado por prioridad:
 5. **Cuentas y accesos.** Confirmar que AI Studio (gratis), Firebase (auto-provisioning) y Cloud Run están disponibles para las cuentas de los estudiantes; revisar cualquier costo de Cloud Run.
 6. **Pendiente menor de consistencia.** Los nombres de campos/colección difieren por proyecto (PWA en español: `cafeterias`/`nombre`; nativa: `entradas`/`titulo`,`nota`). Es coherente dentro de cada proyecto; documentado aquí por si se quiere unificar el criterio.
 
+---
+
+## Checklist de verificación técnica pre-clase (obligatorio)
+
+Como varias funciones del flujo nativo son recientes, **prueba en vivo con una cuenta real ANTES** de cada sesión técnica. (Estos son pasos de verificación, no un proyecto alterno.)
+
+**Antes de la sesión 3 (PWA / Firestore):**
+- [ ] Con **Gmail personal** (no institucional), construir "Ruta del Café" completa.
+- [ ] "Enable Firebase" → los datos aparecen vía `onSnapshot`; crear un registro se refleja **sin recargar**.
+- [ ] Deploy a **Cloud Run** end-to-end: ¿pide **facturación/tarjeta**? Medir latencia. Confirmar que "Instalar PWA" aparece bajo HTTPS.
+
+**Antes de la sesión 4 (nativo — el gran desconocido):**
+- [ ] Confirmar que AI Studio **genera proyecto nativo Kotlin/Compose** (no una web disfrazada).
+- [ ] El **emulador de Android del navegador** carga y renderiza el grid.
+- [ ] **"Install on Device"** (WebUSB) con teléfono + cable de datos reales: ¿instala y abre? Probar en al menos un teléfono.
+
+**Antes de la sesión 6 (login + datos + Storage):**
+- [ ] **Google Sign-In en teléfono físico** (no solo emulador): verificar que no da error de `SHA-1` / `DEVELOPER_ERROR (code 10)`.
+- [ ] "Enable Firebase" habilita **Storage** (no solo Firestore/Auth); subir una foto real y obtener su `downloadURL`.
+- [ ] Provocar y resolver el **índice compuesto** de Firestore (filtrar por `uid` + `orderBy fecha`): capturar el rescate.
+- [ ] Probar con **dos cuentas** que cada `uid` ve solo lo suyo (valida las reglas de seguridad).
+
+**Antes de la sesión 7 (cámara):**
+- [ ] Permiso de cámara en runtime + captura + subida, en teléfono físico.
+- [ ] Nano Banana genera un ícono usable; el ícono adaptativo y el splash se ven instalados.
+
+**Transversal:** ten a mano **2 teléfonos Android** de distinto fabricante, un **cable de datos** verificado, y confirma en pantalla el **nombre del modelo por defecto** de AI Studio antes de sacar capturas.
+
+---
+
 > **Notas del docente:** el curso es **100% en vivo** (no hay videos grabados que actualizar). **Todas las apps se crean en AI Studio, desde el navegador** — no hay que compilar nada en local. Las carpetas de `proyectos-referencia/` son **referencia visual** de cómo queda la app terminada (apoyo docente); no se compilan ni se corren localmente. El esqueleto nativo mantiene un nombre de paquete ilustrativo (`com.example.portafoliocreativo`), sin efecto en el curso.
 
 ---

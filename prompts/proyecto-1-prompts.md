@@ -16,7 +16,7 @@ App de referencia para construir en **Google AI Studio Build Mode**. "Ruta del C
 
 ## Paleta de marca (cálida, cafetera)
 Fondo crema #FDF6EC · Vino #6D2E46 (principal) · Terracota #C84B31 · Mostaza #E3B23C · Texto #2B2B2B.
-Categorías y color de badge: Para trabajar #6D2E46 · Brunch #C84B31 · De barrio #E3B23C (texto oscuro) · Tostador #4F772D · Al paso #3A6B7E.
+Categorías y color de badge (mapeo oficial): Para trabajar #3A6B7E (azul, texto blanco) · Brunch #E3B23C (mostaza, texto oscuro #3a2c00) · De barrio #C84B31 (terracota, texto blanco) · Tostador #4F772D (verde, texto blanco) · Al paso #6D2E46 (vino, texto blanco).
 
 ---
 
@@ -25,17 +25,18 @@ Categorías y color de badge: Para trabajar #6D2E46 · Brunch #C84B31 · De barr
 > Crea una aplicación web usando React con Tailwind CSS que funcione como una guía de cafés de especialidad de Guatemala llamada "Ruta del Café". Toda la interfaz en español (Guatemala). Quiero una UI/UX de altísima calidad, mobile-first, con jerarquía visual clara y aire generoso.
 >
 > **Funcionalidad (qué hace):**
-> - Muestra cafeterías en tarjetas. Genera 8 cafeterías de ejemplo dentro de la app (aún sin base de datos). Cada café tiene: `nombre` (texto), `zona` (texto; ejemplos reales de GT: "Zona 10, Ciudad de Guatemala", "Cuatro Grados Norte", "Antigua Guatemala", "Xela"), `categoria` (una de: "Para trabajar", "Brunch", "De barrio", "Tostador", "Al paso"), `especialidad` (texto; ej. "Filtrado de Huehuetenango"), `descripcion` (1–2 frases), `imagenUrl` (placeholder por ahora).
-> - Cafeterías variadas en categorías, zonas y especialidades.
+> - Muestra cafeterías en tarjetas. Genera 8 cafeterías de ejemplo dentro de la app (aún sin base de datos). Cada café tiene: `nombre` (texto), `zona` (texto; ejemplos reales de GT: "Zona 10, Ciudad de Guatemala", "Cuatro Grados Norte", "Antigua Guatemala", "Xela"), `categoria` (una de: "Para trabajar", "Brunch", "De barrio", "Tostador", "Al paso"), `especialidad` (texto; ej. "Filtrado de Huehuetenango", "Grano de cooperativa maya de Atitlán/Sololá", "Tueste de Cobán, Alta Verapaz"), `descripcion` (1–2 frases), `imagenUrl` (placeholder por ahora).
+> - Cafeterías variadas en categorías, zonas y especialidades. Refleja la diversidad cafetalera de GT: 1–2 cafés que resalten granos de **cooperativas mayas** (Atitlán/Sololá, Cobán/Alta Verapaz, San Marcos, Huehuetenango) y, si cabe natural, una mención a la **costa caribeña (cultura garífuna)**. Con respeto, sin estereotipos.
 >
 > **Interfaz (UI/UX):**
 > - Header con "Ruta del Café" y subtítulo "Cafés de especialidad en Guatemala"; debajo, la cuadrícula de tarjetas.
 > - Tarjeta (card): imagen arriba; luego `nombre` en negrita (dominante); `zona` con ícono de ubicación; `especialidad` como texto secundario; y un badge de color con la `categoria`.
+> - Cada imagen (campo `imagenUrl`) debe llevar **texto alternativo descriptivo** (por ejemplo, el nombre y el tipo del café); los íconos puramente decorativos se marcan como decorativos para lectores de pantalla.
 > - Color: fondo crema #FDF6EC, principal vino #6D2E46, secundario terracota #C84B31, acento mostaza #E3B23C, texto #2B2B2B. Color con propósito.
 > - Tipografía con carácter editorial en títulos; espaciado en grid de 8px con aire generoso.
 > - Estados: estado vacío amable ("Aún no hay cafés").
 > - Microinteracciones: bordes redondeados, sombra suave, hover sutil (elevación + sombra) con transición 250ms.
-> - Accesibilidad: contraste AA, buen tamaño táctil. Responsive: 1 col teléfono, 2 tablet, 3 escritorio.
+> - Accesibilidad: contraste AA, áreas táctiles de mínimo 44×44 px. Responsive: 1 col teléfono, 2 tablet, 3 escritorio.
 >
 > **Estructura del código:**
 > - Componentes separados: `Header`, `ListaCafes`, `TarjetaCafe`, `FiltroCategoria`, `DetalleCafe`, más `App`. Datos de ejemplo en `data/cafeterias.js`.
@@ -55,7 +56,7 @@ Categorías y color de badge: Para trabajar #6D2E46 · Brunch #C84B31 · De barr
 > **Qué construimos:** el sistema de color por categoría.
 >
 > **Interfaz (UI/UX):**
-> - Badge de categoría con color: "Para trabajar" #6D2E46, "Brunch" #C84B31, "De barrio" #E3B23C (texto oscuro #2B2B2B), "Tostador" #4F772D, "Al paso" #3A6B7E. Texto blanco excepto "De barrio". Bordes redondeados, padding horizontal.
+> - Badge de categoría con color: "Para trabajar" #3A6B7E (azul), "Brunch" #E3B23C (mostaza, texto oscuro #3a2c00 por contraste), "De barrio" #C84B31 (terracota), "Tostador" #4F772D (verde), "Al paso" #6D2E46 (vino). Texto blanco en todas excepto "Brunch", que usa texto oscuro #3a2c00. Bordes redondeados, padding horizontal.
 > - Usa estos colores de forma consistente en tarjeta y detalle. Padding interno cómodo en la tarjeta y hover afinado (250ms).
 
 ---
@@ -147,12 +148,18 @@ Categorías y color de badge: Para trabajar #6D2E46 · Brunch #C84B31 · De barr
 **Estado vacío con personalidad.**
 > Rediseña el estado vacío del filtro ("No encontramos cafés en esta categoría… todavía") con un ícono/ilustración sencillo. Solo interfaz.
 
+**Estados de foco visibles (navegación por teclado).**
+> Agrega estados de **foco visibles** en chips, botones y enlaces (un anillo/borde de foco claro con buen contraste) para que la app se pueda navegar con teclado en escritorio. No cambies la funcionalidad.
+
 ---
 
 ## Prompts de rescate
 
 ### Los cafés no aparecen
 > El listado está vacío. Revisa: 1) que la lectura de "cafeterias" use onSnapshot y actualice el estado; 2) que cada documento se mapee con doc.id y doc.data(); 3) que los nombres de campos coincidan (nombre, zona, categoria, especialidad, descripcion, imagenUrl); 4) que si está vacía se carguen las 8 de ejemplo; 5) agrega "Aún no hay cafés" para distinguir datos vacíos de un error de renderizado.
+
+### Estado de error al leer datos (con "Reintentar")
+> **Interfaz (UI/UX):** cuando la lectura de "cafeterias" falle (sin conexión o error de Firestore), muestra un **estado de error** distinto del estado vacío: un mensaje amable en español ("No pudimos cargar los cafés. Revisa tu conexión.") y un botón **"Reintentar"** que vuelve a intentar la lectura. No lo confundas con "Aún no hay cafés" (ese es el estado vacío, cuando no hay error).
 
 ### Firestore da error de permisos
 > Aparece "Missing or insufficient permissions". En AI Studio, Firebase se auto-provisiona; pídele a la IA que ajuste las reglas de Firestore para permitir lectura/escritura durante el desarrollo, y recuérdame endurecerlas antes de publicar. No dejes reglas abiertas en producción.

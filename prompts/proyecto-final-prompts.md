@@ -33,6 +33,7 @@ Fondo crema #FDF6EC · Vino #6D2E46 (principal) · Terracota #C84B31 · Mostaza 
 > **Interfaz (UI/UX):**
 > - TopAppBar con "Bitácora Visual". Debajo, las entradas en una cuadrícula de 2 columnas (LazyVerticalGrid) tipo mosaico.
 > - Tarjeta de entrada: foto arriba (dominante, esquinas redondeadas), debajo `titulo` en negrita y la fecha en texto secundario pequeño.
+> - Cada imagen (campo `imagenUrl`) debe llevar **texto alternativo descriptivo** (por ejemplo, el título y el tipo de la entrada); los íconos puramente decorativos se marcan como decorativos para lectores de pantalla.
 > - FAB "+" en la esquina inferior derecha, color vino #6D2E46.
 > - Paleta (define en el tema Material 3): fondo crema #FDF6EC, principal vino #6D2E46, secundario terracota #C84B31, acento mostaza #E3B23C, texto #2B2B2B.
 > - Tipografía con carácter editorial; espaciado en grid de 8dp con aire generoso.
@@ -53,7 +54,7 @@ Fondo crema #FDF6EC · Vino #6D2E46 (principal) · Terracota #C84B31 · Mostaza 
 > - Google Sign-In de Firebase Authentication. Si no hay sesión, muestra login; si la hay, muestra la bitácora. Opción "Cerrar sesión". (Aprobaré "Enable Firebase" cuando lo pidas.)
 >
 > **Interfaz (UI/UX):**
-> - Login: tarjeta centrada con "Bitácora Visual" en vino #6D2E46, la frase "Tu diario visual privado" y un botón "Iniciar sesión con Google" claro y con buena área táctil, sobre fondo crema.
+> - Login: tarjeta centrada con "Bitácora Visual" en vino #6D2E46, la frase "Tu diario visual privado" y un botón "Iniciar sesión con Google" claro y con área táctil de mínimo 48dp, sobre fondo crema.
 > - En la bitácora, avatar/nombre del usuario en la TopAppBar con la opción "Cerrar sesión".
 
 ---
@@ -152,6 +153,12 @@ Fondo crema #FDF6EC · Vino #6D2E46 (principal) · Terracota #C84B31 · Mostaza 
 
 ### El login con Google falla
 > El login con Google no funciona. Revisa Firebase Authentication (proveedor Google habilitado), la detección del estado de sesión y que tras iniciar sesión se muestre la bitácora. En AI Studio, Firebase se auto-provisiona: no necesito consola ni SHA-1.
+
+### Firestore pide crear un índice compuesto
+> Al filtrar por `uid` y ordenar por `fecha` descendente, Firestore muestra un error tipo "The query requires an index" (índice compuesto). Ayúdame: 1) crea el **índice compuesto** que pide la consulta (campos `uid` + `fecha` descendente) y explícame dónde queda; **o** 2) si es más simple, deja la consulta filtrando solo por `uid` y **ordena las entradas por fecha en el cliente** (en el código, no en Firestore). Elige la opción más sencilla y dime cuál usaste.
+
+### Estado de error al leer datos (con "Reintentar")
+> **Interfaz (UI/UX):** cuando la lectura de "entradas" falle (sin conexión o error de Firestore), muestra un **estado de error** distinto del estado vacío: un mensaje amable en español ("No pudimos cargar tu bitácora. Revisa tu conexión.") y un botón **"Reintentar"** que vuelve a intentar la lectura. No lo confundas con el estado vacío ("Tu bitácora está en blanco…"), que es cuando no hay entradas pero tampoco error.
 
 ### Las fotos no se suben a Storage
 > La subida a Storage no funciona. Revisa: ruta "entradas/{uid}/{timestamp}.jpg"; obtener la URL de descarga y guardarla en imagenUrl; reglas de Storage que permitan al usuario subir a su carpeta; mensaje de error claro si falla.

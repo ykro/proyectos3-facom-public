@@ -43,18 +43,30 @@ Cerrar el curso con un **Demo Day**: cada estudiante presenta en vivo su app nat
 
 ---
 
-## Rúbrica breve (20 puntos)
+## Rúbrica del Examen Final (20 puntos)
+
+El final tiene **dos componentes**: un **escrito en línea** (teoría + práctica) y la **defensa** del Proyecto Final en el Demo Day.
+
+### Componente 1 — Escrito en línea (8 puntos)
+
+Examen individual en línea con teoría (nativo, Material 3 como vocabulario, login/uid, Storage, reglas, distribución/ASO, portafolio/pitch) y práctica escrita (redactar un prompt, diseñar un modelo de datos por usuario, escribir un prompt de rescate, redactar una ficha de tienda o un pitch). Instrumento completo con clave y bandas en `examenes/examen-final.md` (repo privado). Es de 100 pts (Teoría 40 % / Práctica 60 %) y **se convierte a estos 8 puntos**.
+
+### Componente 2 — Defensa / Demo Day (12 puntos)
 
 | Criterio | Qué se evalúa | Puntos |
 |----------|---------------|--------|
-| **App nativa funcional** | Funciona en el emulador del navegador o instalada en el teléfono; bitácora con datos reales; login con Google funcionando. | 5 |
-| **Datos, fotos y seguridad** | Firestore por usuario (uid), fotos en Storage, reglas que protegen los datos de cada quien. | 4 |
-| **Capacidad del teléfono y pulido** | Cámara (u otra capacidad) funcionando; ícono y splash con marca; UI consistente. | 4 |
-| **Pitch y demo** | Pitch claro de 2–3 min; demo en vivo sin perderse; comunica valor. | 4 |
-| **Portafolio y proceso** | Caso problema/proceso/resultado; evidencia de dirección de IA (prompts/decisiones). | 3 |
-| **Total** | | **20** |
+| **App nativa funcional** | Funciona en el emulador o en el teléfono; bitácora con datos reales; login con Google funcionando. | 3 |
+| **Datos, fotos y seguridad** | Firestore por usuario (uid), fotos en Storage, reglas que protegen los datos de cada quien. | 2 |
+| **Capacidad del teléfono y pulido** | Cámara **o** galería (equidad de dispositivos) funcionando; ícono y splash con marca; UI consistente y accesible. | 2 |
+| **Pitch y demo** | Pitch claro de 2–3 min; demo en vivo sin perderse; comunica valor. | 3 |
+| **Portafolio y proceso** | Caso problema/proceso/resultado; **bitácora de prompts** y evidencia de dirección de IA. | 2 |
+| **Total defensa** | | **12** |
 
-> *Penalización sugerida:* presentar la "Bitácora Visual" de referencia sin personalizar (sin entradas propias, sin marca propia) reduce los criterios de **Capacidad/pulido** y **Portafolio** a la mitad, porque el entregable pide su propia bitácora real.
+> **Bandas por criterio:** califica cada criterio como **Excelente / Aceptable / Insuficiente** y asigna el puntaje dentro de su rango.
+>
+> *Penalización sugerida:* presentar la "Bitácora Visual" de referencia sin personalizar (sin entradas propias, sin marca propia) reduce **Capacidad/pulido** y **Portafolio** a la mitad, porque el entregable pide su propia bitácora real.
+>
+> *Equidad:* quien no tenga teléfono Android puede demostrar con el **emulador** y usar **galería** en vez de cámara, sin penalización en el criterio correspondiente.
 
 ## Cómo dar retroalimentación
 

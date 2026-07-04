@@ -74,6 +74,7 @@ Crea una app nativa de Android usando Kotlin y Jetpack Compose (Material 3) llam
 **Interfaz (UI/UX — cómo se ve y se siente):**
 - Layout y jerarquía: una barra superior (TopAppBar) con el título "Bitácora Visual". Debajo, las entradas en una cuadrícula de 2 columnas (LazyVerticalGrid) tipo mosaico visual.
 - Componentes — tarjeta de entrada: la foto arriba (dominante, con esquinas redondeadas), debajo el titulo en negrita y la fecha en texto secundario pequeño.
+- Cada imagen (imagenUrl) lleva texto alternativo descriptivo (por ejemplo, el título y el tipo de la entrada); los íconos decorativos se marcan como decorativos para lectores de pantalla.
 - FAB "+" en la esquina inferior derecha, en color vino #6D2E46.
 - Color (paleta de marca): fondo crema #FDF6EC, principal vino #6D2E46, secundario terracota #C84B31, acento mostaza #E3B23C, texto #2B2B2B. Define estos colores en el tema (Material 3) y úsalos con propósito.
 - Tipografía y espaciado: títulos con carácter editorial; espaciado en grid de 8dp con aire generoso entre tarjetas.
@@ -123,6 +124,8 @@ Crea una app nativa de Android usando Kotlin y Jetpack Compose (Material 3) llam
 
 > *Tip: este es el corazón del proyecto. Un prompt a la vez y revisa la vista previa. Guarda un **checkpoint** antes de conectar Firebase.*
 
+> **Meta mínima vs. ampliación.** Si esta sección se te complica, la **meta base** es: **login con Google + leer y crear una entrada (solo título y nota, sin foto)**. Con eso ya tienes una app funcional que entregar. Subir la **foto a Storage** (Paso 9) es el **paso 2 (ampliación)**: agrégalo cuando lo base ya funcione. Así, si te atoras, igual entregas algo que corre.
+
 **Paso 6.** Agreguemos el **inicio de sesión con Google**:
 
 ```
@@ -134,7 +137,7 @@ Crea una app nativa de Android usando Kotlin y Jetpack Compose (Material 3) llam
 - Agrega la opción "Cerrar sesión".
 
 **Interfaz (UI/UX):**
-- Pantalla de login: una tarjeta centrada con el nombre "Bitácora Visual" en vino #6D2E46, una frase corta ("Tu diario visual privado") y un botón "Iniciar sesión con Google" claro y con buena área táctil, sobre fondo crema.
+- Pantalla de login: una tarjeta centrada con el nombre "Bitácora Visual" en vino #6D2E46, una frase corta ("Tu diario visual privado") y un botón "Iniciar sesión con Google" claro y con área táctil de mínimo 48dp, sobre fondo crema.
 - En la bitácora, muestra el avatar/nombre del usuario en la TopAppBar, con la opción "Cerrar sesión".
 ```
 
@@ -212,6 +215,8 @@ Cuando AI Studio detecte que necesitas autenticación, te ofrecerá **"Enable Fi
 ```
 
 > *Tip: la cámara funciona de verdad en un **teléfono físico**. Instala con **"Install on Device"** y pruébala ahí; en el emulador del navegador la cámara puede ser simulada.*
+
+> **Si no tienes un teléfono Android** con depuración USB, usa **"elegir desde la galería"** como alternativa de **primera clase** (no es un castigo): capturas la misma entrada eligiendo una foto ya tomada. Tu proyecto **no queda en desventaja** en la evaluación por usar la galería en vez de la cámara en vivo. La cámara sigue siendo la forma principal para quien sí puede probarla.
 
 **Paso 12.** Revisa e instala en tu teléfono para probar tomar una foto.
 
@@ -312,6 +317,14 @@ El inicio de sesión con Google no funciona. Revisa Firebase Authentication con 
 
 > *Nota: en AI Studio, Firebase se configura solo (auto-provisioning). No necesitas la consola, ni archivos de configuración, ni huellas SHA-1.*
 
+### Firestore pide crear un índice compuesto
+
+Al filtrar por `uid` y ordenar por `fecha` descendente, Firestore puede pedir un **índice compuesto** ("The query requires an index"). Es normal. Pídele a la IA que lo resuelva:
+
+```
+Al leer las entradas filtrando por uid y ordenando por fecha descendente, Firestore pide crear un índice compuesto ("The query requires an index"). Resuélvelo de la forma más simple: 1) crea el índice compuesto (uid + fecha descendente) y explícame dónde queda; o 2) filtra solo por uid y ordena las entradas por fecha en el cliente (en el código). Dime cuál opción usaste.
+```
+
 ### Las fotos no se suben a Storage
 
 ```
@@ -359,6 +372,7 @@ Ya construiste la app de referencia. **Ahora la haces tuya.** Puedes quedarte co
 
 ## Conceptos clave de este proyecto
 
+- **Vocabulario de Material 3 (como diseño, no como código):** los componentes que nombras en tus prompts —TopAppBar, FAB, LazyVerticalGrid, cards, chips y **NavigationBar** (barra de navegación inferior)— son el lenguaje de diseño de Android. Los pides por nombre; la IA los construye.
 - **Una sola herramienta, del navegador al dispositivo:** AI Studio genera tanto la PWA como la app nativa (Kotlin + Jetpack Compose). La ves en el emulador del navegador y la instalas con "Install on Device", sin terminal ni instalaciones.
 - **Funcionalidad e Interfaz separadas:** defines qué hace y cómo se ve por separado, con UI/UX de alta calidad.
 - **Lo nativo importa:** cámara, datos privados por usuario y captura en el momento — cosas que una web no hace bien.

@@ -28,6 +28,8 @@ Al terminar, vas a entender cómo funciona el **desarrollo de software asistido 
 - Una **cuenta de Google (Gmail)**. Si no tienes una, créala gratis en [accounts.google.com](https://accounts.google.com).
 - Acceso a **Google AI Studio** en [aistudio.google.com](https://aistudio.google.com).
 
+> **Importante: usa una cuenta de Gmail personal**, no una cuenta institucional (@galileo.edu u otra de Workspace). Las cuentas institucionales suelen tener **bloqueos del administrador** que impiden usar AI Studio, crear proyectos de Firebase o autorizar apps (OAuth). **Verifícalo antes de la sesión 1**: entra a [aistudio.google.com](https://aistudio.google.com) con tu cuenta personal y confirma que puedes crear una app. Si tu única cuenta es institucional y no te deja, crea una cuenta de Gmail personal gratis.
+
 **No necesitas instalar nada.** Los dos proyectos —la PWA y la app nativa— se construyen y se ven **dentro del navegador**.
 
 ### Solo si quieres probar la app nativa en un teléfono real

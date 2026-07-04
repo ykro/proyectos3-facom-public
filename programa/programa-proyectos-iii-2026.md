@@ -62,8 +62,12 @@ Observaciones
 
 - La zona se establecerá en los períodos del curso, por lo que se aconseja al estudiante asistir a todas las actividades.
 - Todo estudiante debe cumplir con el 80 % de asistencia para tener derecho a examen parcial y final.
-- Los exámenes (parcial y final) consisten en una evaluación teórica escrita y una evaluación práctica de la defensa de proyecto.
-- Las herramientas utilizadas (Google AI Studio y Firebase) son gratuitas y se usan **desde el navegador**; solo se requiere una cuenta de Google. Para probar la app nativa en un teléfono físico basta un cable USB (AI Studio la instala desde Chrome).
+- Los exámenes (parcial y final) tienen **dos componentes**, ambos evaluados sobre los 20 puntos del examen:
+  - **Escrito en línea (8 pts)** — examen individual con **teoría** (opción múltiple, verdadero/falso razonado, respuesta corta) y **práctica escrita** (redactar prompts con separación Funcionalidad/Interfaz, diseñar un modelo de datos, escribir un prompt de rescate, criticar/mejorar una interfaz, redactar una ficha de tienda o un pitch). No se programa: se evalúa el criterio de diseño y la dirección de la IA.
+  - **Defensa del proyecto (12 pts)** — presentación en vivo del proyecto (Parcial: PWA "Ruta del Café"/su idea; Final: app nativa "Bitácora Visual"/su idea + portafolio + pitch en el Demo Day), con rúbrica de bandas (ver `instrucciones-docente/sesion-05.md` y `sesion-10.md`).
+- Los **3 quizzes** de verificación (u1, u2, u3) son **formativos** y cuentan dentro de *Tareas / investigaciones*. La **bitácora de prompts** es un entregable con formato mínimo (prompts clave, una decisión de diseño y un problema resuelto) y se pondera dentro de *Proyectos* y de la defensa.
+- **Integridad académica:** la IA es una herramienta de trabajo; el criterio, las decisiones de diseño y la idea propia son del estudiante. Se debe **entregar la propia idea de app** (no la app de referencia sin personalizar ni la de otra persona), documentar el proceso en la bitácora y usar de forma responsable las imágenes generadas por IA. Copiar el proyecto de referencia o de otro estudiante, o presentar trabajo ajeno como propio, se penaliza.
+- Las herramientas (Google AI Studio y Firebase) se usan **desde el navegador** y tienen **capa gratuita**; se recomienda usar una **cuenta de Gmail personal** (las cuentas institucionales suelen bloquear estos servicios). *Nota:* publicar en **Cloud Run** y usar **Firebase Storage** puede requerir **habilitar la facturación** del proyecto (aunque el uso quede dentro del nivel gratuito); si así fuera, el docente indicará cómo o dará una alternativa (instalar la PWA desde la vista previa). Para probar la app nativa en un teléfono físico basta un cable USB (AI Studio la instala desde Chrome).
 
 **Contenido / Cronograma**
 
