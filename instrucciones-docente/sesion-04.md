@@ -14,7 +14,7 @@ Que el estudiante entienda cuándo conviene una app **nativa**, cree una **app n
 - Ten `aistudio.google.com` abierto en **Chrome** e inicia sesión con tu cuenta de Google.
 - Crea una vez, en privado, una app **nativa** de prueba para ver cómo se comporta el **emulador del navegador** (tarda un poco más que una PWA en generar la primera vez).
 - Si quieres demostrar **"Install on Device"**: ten un teléfono Android con **modo de desarrollador** y **depuración por USB** activados, y un cable **USB** que transmita datos. No necesitas ADB ni el SDK de Android; AI Studio instala la app directo desde Chrome.
-- Ten a mano la mini-app de la demo rotativa ("Mi Estantería").
+- Ten a mano la mini-app de la demo del docente ("Mi Estantería").
 - Revisa la Sección 1 de `guias-estudiante/proyecto-final-nativo.md`.
 
 ---
@@ -49,7 +49,7 @@ Que el estudiante entienda cuándo conviene una app **nativa**, cree una **app n
 
 > El laboratorio del estudiante es "Bitácora Visual" (la app insignia de la guía). Para la demo en vivo usa una **mini-app nativa distinta** que ilustre el flujo nativo sobre otro tema.
 
-#### Demo rotativa de la sesión: "Mi Estantería"
+#### Demo del docente de la sesión: "Mi Estantería"
 
 > 🎯 **Referencia visual del resultado esperado:** [ver captura](../demos/screenshots/mi-estanteria.png) · mock-up navegable: [`demos/mi-estanteria.html`](../demos/mi-estanteria.html). Reconstrúyela en vivo con el prompt de abajo (no la copies tal cual).
 

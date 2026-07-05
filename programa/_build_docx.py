@@ -136,6 +136,13 @@ for t in [
     "del examen. Los proyectos (PWA y app nativa + portafolio + pitch) se entregan en línea "
     "y se evalúan dentro de Proyectos; el Demo Day de la sesión 10 es un showcase de "
     "celebración y entrega, no una defensa calificada.",
+    "Los 30 puntos de Proyectos corresponden a los dos proyectos (PWA y app nativa + "
+    "portafolio + pitch), que el docente reparte entre ambos; cada uno se evalúa con su "
+    "rúbrica por criterio (bandas Excelente / Aceptable / Insuficiente) en sesion-05.md y "
+    "sesion-10.md. Los 10 puntos de "
+    "Tareas / investigaciones y los 20 de Laboratorios se distribuyen de forma equitativa "
+    "entre las entregas de cada categoría; cada entrega se califica con una rúbrica breve de "
+    "tres bandas (Excelente / Aceptable / Insuficiente).",
     "Las herramientas utilizadas (Google AI Studio y Firebase) son gratuitas y se usan "
     "desde el navegador; solo se requiere una cuenta de Google. Para probar la app nativa "
     "en un teléfono físico basta un cable USB (AI Studio la instala desde Chrome).",
@@ -198,6 +205,7 @@ set_exam_row(5, "Semana 5 (3 de agosto)",
 
 set_row(6, "Semana 6 (10 de agosto)",
     "Desarrollo nativo II: login y datos por usuario",
+    "Investigación 1: Reglas de seguridad de Firebase\n"
     "Laboratorio 5: App nativa con login con Google y datos privados por usuario en Firestore/Storage",
     "Exposición sobre:\n- Inicio de sesión con Google (Firebase Authentication)\n"
     "- Datos privados por usuario en Firestore (uid, tiempo real)\n"
@@ -205,7 +213,6 @@ set_row(6, "Semana 6 (10 de agosto)",
 
 set_row(7, "Semana 7 (17 de agosto)",
     "Desarrollo nativo III: cámara y pulido de marca",
-    "Investigación 1: Reglas de seguridad de Firebase\n"
     "Laboratorio 6: App nativa con cámara, ícono/splash y lista para entregar",
     "Exposición sobre:\n- La cámara del teléfono y permisos en tiempo de ejecución\n"
     "- Reglas de seguridad de Firestore y Storage\n- Ícono, splash y pulido de marca\n"

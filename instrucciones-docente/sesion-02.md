@@ -12,7 +12,7 @@ Que el estudiante refuerce la **identidad visual** de su app, agregue un **filtr
 ## Preparación previa
 
 - Ten tu "Ruta del Café" de la sesión 1 lista, con el refinamiento de colores aplicado.
-- Ten a mano la mini-app de la demo rotativa ("Adopta un Peludo"); prueba una vez el flujo completo en privado.
+- Ten a mano la mini-app de la demo del docente ("Adopta un Peludo"); prueba una vez el flujo completo en privado.
 - Prueba una vez la generación de imágenes con Nano Banana (AI Chips) para conocer el flujo del día.
 - Revisa los Pasos 5–9 de `guias-estudiante/proyecto-1-pwa.md`.
 
@@ -40,7 +40,7 @@ Que el estudiante refuerce la **identidad visual** de su app, agregue un **filtr
 
 > El laboratorio del estudiante sigue en "Ruta del Café". Para la demo usa una **mini-app distinta** que ilustre el filtro y el detalle sobre otro tema.
 
-#### Demo rotativa de la sesión: "Adopta un Peludo"
+#### Demo del docente de la sesión: "Adopta un Peludo"
 
 > 🎯 **Referencia visual del resultado esperado:** [ver captura](../demos/screenshots/adopta-un-peludo.png) · mock-up navegable: [`demos/adopta-un-peludo.html`](../demos/adopta-un-peludo.html). Reconstrúyela en vivo con el prompt de abajo (no la copies tal cual).
 

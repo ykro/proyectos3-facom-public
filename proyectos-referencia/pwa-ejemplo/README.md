@@ -39,11 +39,11 @@ vistazo:
 
 | Categoria       | Color        |
 | --------------- | ------------ |
-| Para trabajar   | vino #6D2E46 |
-| Brunch          | terracota #C84B31 |
-| De barrio       | mostaza #E3B23C (texto oscuro #2B2B2B) |
+| Para trabajar   | azul #3A6B7E |
+| Brunch          | mostaza #E3B23C (texto oscuro #2B2B2B) |
+| De barrio       | terracota #C84B31 |
 | Tostador        | verde #4F772D |
-| Al paso         | azul #3A6B7E |
+| Al paso         | vino #6D2E46 |
 
 Si la coleccion `cafeterias` todavia esta vacia (o la config de Firebase es el placeholder),
 la app muestra automaticamente los **datos de ejemplo** de `src/data/cafeterias.json` para

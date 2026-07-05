@@ -12,7 +12,7 @@ Que el estudiante conecte su app a **Firebase Firestore** (datos en la nube en t
 ## Preparación previa
 
 - Ten tu "Ruta del Café" con filtro y detalle (sesión 2).
-- Ten a mano la mini-app de la demo rotativa ("Recetario Rápido"); prueba el flujo de Firestore + PWA en privado.
+- Ten a mano la mini-app de la demo del docente ("Recetario Rápido"); prueba el flujo de Firestore + PWA en privado.
 - Prueba una vez el flujo de **"Enable Firebase"** (auto-provisioning) y, si vas a demostrarlo, el **Deploy a Cloud Run**.
 - Revisa los Pasos 10–16 de `guias-estudiante/proyecto-1-pwa.md`.
 - Ten un teléfono a mano para demostrar la instalación de la PWA.
@@ -37,7 +37,7 @@ Que el estudiante conecte su app a **Firebase Firestore** (datos en la nube en t
 
 > El laboratorio del estudiante sigue en "Ruta del Café". Para la demo usa una **mini-app distinta** que ilustre Firestore y la PWA instalable sobre otro tema.
 
-#### Demo rotativa de la sesión: "Recetario Rápido"
+#### Demo del docente de la sesión: "Recetario Rápido"
 
 > 🎯 **Referencia visual del resultado esperado:** [ver captura](../demos/screenshots/recetario-rapido.png) · mock-up navegable: [`demos/recetario-rapido.html`](../demos/recetario-rapido.html). Reconstrúyela en vivo con el prompt de abajo (no la copies tal cual).
 
@@ -113,12 +113,13 @@ Crea una aplicación web usando React con Tailwind CSS llamada "Recetario Rápid
     - **Laboratorio 3 — PWA con datos persistentes, instalable.**
     - **Examen Parcial (sesión 5):** examen **escrito en línea** + **entrega en línea del Proyecto 1**. Pídeles tener la URL publicada y sus prompts guardados.
 
-20. Sugiere responder el quiz `quiz/u1-pwa-quiz.md`. Adelanta la sesión 4 (desarrollo nativo). Cierra.
+20. Sugiere responder **el quiz de la unidad** (disponible en el repositorio privado del docente). Adelanta la sesión 4 (desarrollo nativo). Cierra.
 
 ---
 
 ## Notas
 
 - Aclara que los **checkpoints guardan código, no datos**: si regresan a un checkpoint, los registros creados en Firestore siguen ahí.
+- **Aviso de facturación (Cloud Run):** publicar en Cloud Run puede requerir **habilitar la facturación** del proyecto de Google Cloud (asociar una tarjeta), aunque el uso del curso se mantenga dentro del **nivel gratuito**. Avísalo a los estudiantes antes de publicar y no obligues a nadie a habilitarla. **Alternativa sin facturación:** dejar la PWA **instalable desde la vista previa** (o compartir la URL de preview) y publicar en Cloud Run más adelante si lo desean.
 - Si el deploy a Cloud Run es lento o falla en clase, no bloquees el laboratorio: que avancen con la PWA instalable en preview y publiquen después con la guía.
 - Recuérdales guardar todos sus prompts para la bitácora y la entrega del Proyecto 1.

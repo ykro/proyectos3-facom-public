@@ -44,7 +44,7 @@ Las sesiones **8 y 9 son ligeras**: sus archivos traen la **estructura de charla
 - **Proyecto 1 — PWA "Ruta del Café"** (semanas 1–3): guía de cafés de especialidad de Guatemala, app web instalable construida en AI Studio. Se evalúa en el Examen Parcial (sesión 5).
 - **Proyecto Final — App nativa "Bitácora Visual"** (semanas 4, 6, 7): diario visual privado, app nativa Android (Kotlin + Jetpack Compose) construida en AI Studio, todo desde el navegador. Se evalúa en el Demo Day (sesión 10).
 
-> Nota: cada sesión de contenido (1–4, 6, 7) incluye además una **"Demo rotativa"**: una mini-app distinta que el docente construye en vivo para ilustrar el concepto del día, mientras el laboratorio del estudiante sigue en el proyecto insignia y en su propia app.
+> Nota: cada sesión de contenido (1–4, 6, 7) incluye además una **"Demo del docente"**: una mini-app distinta que el docente construye en vivo para ilustrar el concepto del día, mientras el laboratorio del estudiante sigue en el proyecto insignia y en su propia app.
 
 En ambos, el estudiante primero reconstruye la **app de referencia** con la guía y luego aplica lo aprendido a **su propia idea de app**, que es lo que entrega.
 
@@ -60,5 +60,5 @@ En ambos, el estudiante primero reconstruye la **app de referencia** con la guí
 - `guias-estudiante/` — guías paso a paso del estudiante (fuente de los prompts).
 - `prompts/` — prompts iniciales, de refinamiento y de rescate por proyecto.
 - `slides/` — presentaciones de cada sesión de contenido.
-- `quiz/` — quizzes de verificación por unidad.
+- **Quizzes de verificación por unidad** — en el repositorio privado del docente (no se distribuyen al estudiante).
 - `proyectos-referencia/` — apps de referencia terminadas (apoyo del docente; los estudiantes las reconstruyen, no las copian).

@@ -13,7 +13,7 @@ Que el estudiante entienda cómo se **distribuye** y se **comunica** una app (PW
 
 - Decide si habrá **invitado** (profesional de producto/marketing móvil) y coordina su bloque.
 - Ten ejemplos reales de fichas de Play Store para mostrar (buenas y malas).
-- Ten una plantilla simple de store listing para el mini-taller (título, descripción corta, descripción larga, capturas, ícono).
+- Ten lista la **[plantilla de ficha de tienda](../guias-estudiante/plantilla-ficha-tienda.md)** para el mini-taller (título, subtítulo, descripción corta/larga, palabras clave/ASO, capturas, ícono, categoría) y compártela con los estudiantes.
 
 ---
 
@@ -48,13 +48,13 @@ Que el estudiante entienda cómo se **distribuye** y se **comunica** una app (PW
 - **Formato:** charla de **20–30 min** del invitado dentro del Bloque 2, seguida de **10 min de preguntas**. Reduce tu exposición teórica para dejarle espacio.
 - **Briefing al invitado:** audiencia de Comunicación y Diseño (no programadores) que ya construyeron una PWA y una app nativa con IA; enfoque en distribución, marketing, ASO, monetización y casos reales.
 - **Tu rol:** moderas, conectas la charla con el mini-taller y aterrizas los ejemplos a sus proyectos.
-- **Plan B:** si el invitado cancela, usa la estructura completa de "sin invitado" (arriba) y extiende los ejemplos reales.
+- **Si el invitado cancela:** usa la estructura completa de "sin invitado" (arriba) y extiende los ejemplos reales.
 
 ---
 
 ## Mini-taller: ficha de tienda (store listing) (~32 min)
 
-9. Indica el **mini-taller**: cada estudiante redacta el **store listing** de su Proyecto Final ("Bitácora Visual" personalizada) usando la plantilla. Debe incluir:
+9. Indica el **mini-taller**: cada estudiante redacta el **store listing** de su Proyecto Final ("Bitácora Visual" personalizada) usando la **[plantilla de ficha de tienda](../guias-estudiante/plantilla-ficha-tienda.md)**. Debe incluir:
    - **Título** (con una palabra clave).
    - **Descripción corta** (1 frase de gancho).
    - **Descripción larga** (qué hace, para quién, beneficios).
@@ -82,4 +82,4 @@ Que el estudiante entienda cómo se **distribuye** y se **comunica** una app (PW
 - Esta sesión es ligera por diseño: prioriza ejemplos reales y trabajo aplicado por encima de teoría.
 - Conecta todo con su perfil: el marketing de apps es comunicación visual, su terreno natural.
 - El store listing del mini-taller alimenta directamente la Tarea 5 y servirá en el portafolio (sesión 9).
-- Sugiere el quiz `quiz/u3-distribucion-portafolio-quiz.md` como repaso de esta unidad.
+- Sugiere **el quiz de la unidad** (disponible en el repositorio privado del docente) como repaso de esta unidad.

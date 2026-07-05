@@ -7,13 +7,13 @@ Documento de apoyo para **preparar las clases** de *Proyectos III — Diseño de
 - **Paleta única (vino):** #6D2E46 · #C84B31 · #E3B23C · #FDF6EC · #2B2B2B.
 - **Prompts** con separación **Funcionalidad / Interfaz (UI/UX)** y bloques de **personalización**.
 - **Modelo por defecto:** Gemini 3.5 Flash.
-- Cada sesión de contenido tiene una **Demo rotativa** (mini-app distinta) para dar variedad.
+- Cada sesión de contenido tiene una **Demo del docente** (mini-app distinta) para dar variedad.
 
 ---
 
 ## Resumen: qué se necesita por sesión
 
-| Sesión | Tema | Proyecto | Deck | Guía (sección) | Prompts | Quiz | Demo rotativa |
+| Sesión | Tema | Proyecto | Deck | Guía (sección) | Prompts | Quiz | Demo del docente |
 |--------|------|----------|------|----------------|---------|------|---------------|
 | 1 | Intro, UX/UI móvil, IA | PWA | `slides/sesion-01.pptx` | `proyecto-1-pwa.md` §1 | `prompts/proyecto-1` | — | Antojitos Chapines |
 | 2 | Idea → interfaz y prototipo | PWA | `sesion-02.pptx` | §2 + Personalización | " | — | Adopta un Peludo |
@@ -35,7 +35,7 @@ Documento de apoyo para **preparar las clases** de *Proyectos III — Diseño de
 Para cada sesión, el guion paso a paso (con tiempos por bloque) está en `instrucciones-docente/sesion-XX.md`.
 
 ### Sesión 1 — Introducción, UX/UI móvil y el diseñador-creador con IA
-- **Listo:** deck, guía PWA §1 (prompt inicial con split Funcionalidad/Interfaz), instrucciones docente, demo rotativa "Antojitos Chapines".
+- **Listo:** deck, guía PWA §1 (prompt inicial con split Funcionalidad/Interfaz), instrucciones docente, demo del docente "Antojitos Chapines".
 - **Preparar:** cuenta de Google + AI Studio abierto; crear una app vacía antes de clase para medir la latencia; tener listas las capturas de "entrar a Build".
 - **Tareas que se asignan:** Tarea 1 (investigación UI/UX móvil), Laboratorio 1 (primera app + un refinamiento).
 

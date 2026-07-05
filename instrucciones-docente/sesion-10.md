@@ -38,16 +38,15 @@ Examen individual en línea con **teoría** (nativo, Material 3 como vocabulario
 
 ## Rúbrica de entrega del Proyecto Final (cuenta en *Proyectos*, no en el examen)
 
-El **Proyecto Final (app nativa propia) + portafolio + pitch** se entrega **en línea** y se evalúa sobre lo entregado —**no es una defensa en vivo**—; sus puntos cuentan dentro de la categoría **Proyectos** del curso. El Demo Day es el momento de compartirlo, pero la calificación es sobre el entregable (app/video/capturas + portafolio + pitch grabado o escrito + bitácora). Reparte los puntos que asignes al Proyecto Final con estos pesos relativos:
+El **Proyecto Final (app nativa propia) + portafolio + pitch** se entrega **en línea** y se evalúa sobre lo entregado —**no es una defensa en vivo**—; sus puntos cuentan dentro de la categoría **Proyectos** del curso. El Demo Day es el momento de compartirlo (showcase de celebración, **no calificado**), pero la calificación es sobre el entregable (app/video/capturas + portafolio + pitch grabado o escrito + bitácora). Estos criterios reparten los puntos que el docente asigne a este proyecto dentro de la categoría *Proyectos* (30 pts en total para ambos proyectos). Califícalo con esta rúbrica:
 
-| Criterio | Qué se evalúa | Peso |
-|----------|---------------|------|
-| **App nativa funcional** | Funciona en el emulador o en el teléfono; bitácora con datos reales; login con Google funcionando. | 3 |
-| **Datos, fotos y seguridad** | Firestore por usuario (uid), fotos en Storage, reglas que protegen los datos de cada quien. | 2 |
-| **Capacidad del teléfono y pulido** | Cámara **o** galería (equidad de dispositivos) funcionando; ícono y splash con marca; UI consistente y accesible. | 2 |
-| **Pitch y comunicación** | Pitch claro de 2–3 min (grabado o en vivo); comunica valor; caso comprensible. | 3 |
-| **Portafolio y proceso** | Caso problema/proceso/resultado; **bitácora de prompts** y evidencia de dirección de IA. | 2 |
-| **Total** | | **12** |
+| Criterio | Qué se evalúa | Peso relativo |
+|----------|---------------|---------------|
+| **App nativa funcional** | Funciona en el emulador o en el teléfono; bitácora con datos reales; login con Google funcionando. | Alto |
+| **Datos, fotos y seguridad** | Firestore por usuario (uid), fotos en Storage, reglas que protegen los datos de cada quien. | Medio |
+| **Capacidad del teléfono y pulido** | Cámara **o** galería (equidad de dispositivos) funcionando; ícono y splash con marca; UI consistente y accesible. | Medio |
+| **Pitch y comunicación** | Pitch claro de 2–3 min (grabado o en vivo); comunica valor; caso comprensible. | Alto |
+| **Portafolio y proceso** | Caso problema/proceso/resultado; **bitácora de prompts** y evidencia de dirección de IA. | Medio |
 
 > **Bandas por criterio:** califica cada criterio como **Excelente / Aceptable / Insuficiente** y asigna el puntaje dentro de su rango.
 >

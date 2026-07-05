@@ -90,6 +90,7 @@ h1,h2,h3{page-break-after:avoid}
 """
 
 TEMPLATE = """<!doctype html><html lang="es"><head><meta charset="utf-8">
+<base href="{base}">
 <style>{css}</style></head><body>
 <div class="cover">
   <div class="emoji">{emoji}</div>
@@ -119,13 +120,18 @@ def md_to_html_fragment(md_path):
 def main():
     tmp_dir = os.path.join(OUT, "_tmp")
     os.makedirs(tmp_dir, exist_ok=True)
+    # base href para que las rutas relativas de imágenes (img/... y
+    # ../proyectos-referencia/...) se resuelvan desde guias-estudiante/,
+    # aunque el HTML temporal viva en pdf/_tmp/.
+    base_href = "file://" + HERE + "/"
     with sync_playwright() as p:
         b = p.chromium.launch(channel="chrome")
         page = b.new_page()
         for g in GUIDES:
             body = md_to_html_fragment(os.path.join(HERE, g["file"]))
-            html = TEMPLATE.format(css=CSS, emoji=g["emoji"], kicker=g["kicker"],
-                                   title=g["title"], subtitle=g["subtitle"], body=body)
+            html = TEMPLATE.format(css=CSS, base=base_href, emoji=g["emoji"],
+                                   kicker=g["kicker"], title=g["title"],
+                                   subtitle=g["subtitle"], body=body)
             tmp_html = os.path.join(tmp_dir, g["file"].replace(".md", ".html"))
             with open(tmp_html, "w") as f:
                 f.write(html)

@@ -60,13 +60,13 @@ No necesitas saber programar. Tu trabajo es **diseñar** la app —con criterio 
 4. Copia los prompts de la guía y pégalos en AI Studio.
 5. Verifica el resultado en cada paso (vista previa).
 6. Cuando termines la app de referencia, ve a la sección **"Tu proyecto"** al final de cada guía y aplica lo aprendido a **tu propia idea de app**. Eso es lo que entregas.
-7. El docente aplica un breve **quiz de verificación** al cerrar cada unidad, y los **exámenes escritos en línea** (parcial y final, teoría + práctica; **100 % escritos, sin defensa**). Los quizzes y los exámenes —con sus claves— viven en el **repositorio privado del docente**; en este repo público están las **rúbricas del examen y de entrega del proyecto** (en `instrucciones-docente/`) y las guías del estudiante.
+7. El docente aplica un breve **quiz de verificación** al cerrar cada unidad (lo comparte el docente; no está en el material del estudiante).
 
 ### Para el docente
 
 - El detalle sesión por sesión está en `programa/` y en `instrucciones-docente/`.
 - Las guías de `guias-estudiante/` son la fuente principal: cada una tiene los prompts inlineados, listos para copiar y pegar en clase.
-- Cada sesión de contenido incluye una **"Demo rotativa"**: una mini-app distinta que el docente construye en vivo para ilustrar el concepto del día, para dar variedad sin perder profundidad.
+- Cada sesión de contenido incluye una **"Demo del docente"**: una mini-app distinta que el docente construye en vivo para ilustrar el concepto del día, para dar variedad sin perder profundidad.
 - Las presentaciones están en `slides/`.
 - Los proyectos de referencia terminados (Ruta del Café y Bitácora Visual) están en `proyectos-referencia/` solo como apoyo; los estudiantes no los copian, los reconstruyen con la IA.
 - Las notas pedagógicas, rúbricas y guías de evaluación están en `instrucciones-docente/`.
@@ -78,17 +78,26 @@ No necesitas saber programar. Tu trabajo es **diseñar** la app —con criterio 
 ```
 proyectos3-facom/
   README.md                    -- Este archivo (overview del curso)
-  programa/                    -- Programa del curso, sesion por sesion
+  programa/                    -- Programa (.md fuente + .docx), material-por-clase,
+                                  especificacion-asignaciones (spec de toda la evaluacion),
+                                  material-de-apoyo-links (indice de que subir al aula)
   guias-estudiante/            -- Guias paso a paso para los estudiantes
     s0-bienvenida-y-configuracion.md
     proyecto-1-pwa.md          -- PWA "Ruta del Cafe" (semanas 1-3)
     proyecto-final-nativo.md   -- App nativa "Bitacora Visual" (semanas 4, 6, 7)
-  prompts/                     -- Prompts (inicial + refinamientos + personalizacion + rescate) por proyecto
-  demos/                       -- Mini-apps que el docente construye en vivo (mock-ups + capturas)
-  slides/                      -- Presentaciones de cada sesion
-  proyectos-referencia/        -- Apps de referencia terminadas (apoyo, no las copian)
-  instrucciones-docente/       -- Notas pedagogicas, rubricas y evaluacion
+    plantilla-ficha-tienda.md / plantilla-caso-portafolio.md / plantilla-pitch.md
+    img/                       -- Capturas del flujo de AI Studio (Build, Enable Firebase, emulador)
+    pdf/                       -- Las 3 guias en PDF con marca (con capturas incluidas)
+  prompts/                     -- Prompts por proyecto + prompts-demos-docente (las 6 demos del docente)
+  quiz/                        -- Preguntas de verificacion por unidad (material del docente)
+  slides/                      -- 8 presentaciones .pptx (sesiones 1-4, 6-9); generar_slides.py + assets/
+  demos/                       -- Mini-apps que el docente construye en vivo (mock-up + captura real)
+  proyectos-referencia/        -- Apps de referencia terminadas + screenshots (apoyo, no las copian)
+  instrucciones-docente/       -- Guion sesion por sesion, rubricas, guion de video de la clase 1
+  examenes/                    -- Examenes escritos (parcial + final) con clave (material del docente)
 ```
+
+> **Este repositorio es el material completo del curso.** El docente comparte el enlace en la primera clase; todo lo que se usa —guías, prompts, slides, referencias, plantillas— vive aquí. Los estudiantes construyen sus apps en **Google AI Studio** desde el navegador y usan este repo como referencia y material de apoyo.
 
 ---
 
@@ -108,3 +117,6 @@ proyectos3-facom/
 - Los prompts están diseñados para **copiarse y pegarse tal cual** en AI Studio, y separan **Funcionalidad** de **Interfaz (UI/UX)**.
 - Firebase se configura **automáticamente** (auto-provisioning) desde AI Studio. No necesitas entrar a la consola de Firebase.
 - Este curso usa siempre el término **"desarrollo de software asistido por IA"**. Nunca usamos el término "vibe coding".
+- Las guías del estudiante están también en **PDF con marca** en `guias-estudiante/pdf/` (se regeneran con `_build_pdfs.py`).
+- La **evaluación** combina laboratorios/tareas, proyectos y dos exámenes; cada examen es **100 % escrito en línea (teoría + práctica), sin defensa**. Los proyectos se entregan en línea y se evalúan dentro de *Proyectos*. Los quizzes y los exámenes (con claves) son material del docente.
+- **Entrega en dos repos:** este directorio es el master de autoría; el material se divide en un repo **público** (todo menos quizzes/exámenes) y uno **privado** (quizzes + exámenes con claves). Ver `CLAUDE.md`.

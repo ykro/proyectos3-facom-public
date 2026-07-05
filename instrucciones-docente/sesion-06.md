@@ -15,7 +15,7 @@ Que el estudiante convierta su bitácora nativa en un **producto real**: agrega 
 - Prueba el flujo de login con Google y la subida a Storage en privado para conocer la latencia.
 - Revisa la Sección 2 de `guias-estudiante/proyecto-final-nativo.md`.
 - Conecta con la **Investigación 1 (reglas de seguridad de Firebase)** que se asigna hoy.
-- Prepara la mini-app de la **Demo rotativa** ("Diario de Viajes"): ten a mano el prompt inicial para construirla en vivo.
+- Prepara la mini-app de la **Demo del docente** ("Diario de Viajes"): ten a mano el prompt inicial para construirla en vivo.
 
 ---
 
@@ -113,11 +113,11 @@ Que el estudiante convierta su bitácora nativa en un **producto real**: agrega 
     - **Investigación 1 — Reglas de seguridad de Firebase** (qué son, por qué importan, ejemplo aplicado a `entradas`).
     - **Laboratorio 5 — App nativa con datos y login.**
 
-19. Sugiere el quiz `quiz/u2-nativo-datos-quiz.md`. Adelanta la sesión 7 (cámara y pulido). Cierra.
+19. Sugiere **el quiz de la unidad** (disponible en el repositorio privado del docente). Adelanta la sesión 7 (cámara y pulido). Cierra.
 
 ---
 
-### Demo rotativa de la sesión
+### Demo del docente de la sesión
 
 > 🎯 **Referencia visual del resultado esperado:** [ver captura](../demos/screenshots/diario-de-viajes.png) · mock-up navegable: [`demos/diario-de-viajes.html`](../demos/diario-de-viajes.html). Reconstrúyela en vivo con el prompt de abajo (no la copies tal cual).
 
@@ -149,6 +149,7 @@ Pega este **prompt inicial** en AI Studio:
 
 ## Notas
 
+- **Aviso de facturación (Storage):** activar **Firebase Storage** puede pedir **habilitar la facturación** del proyecto (plan Blaze) para aprovisionar el bucket, aunque el uso del curso quede dentro del **nivel gratuito**. Avísalo antes de la demo y no obligues a nadie a habilitarla en vivo. Si no quieres activarla en clase, usa una app de **respaldo ya aprovisionada** y narra el flujo con las capturas.
 - El login con Google funciona mejor en un teléfono real (**"Install on Device"**); ten un respaldo listo por si falla en vivo.
 - Recalca que las fotos van a **Storage** y solo su **dirección** a Firestore; es un error común confundirlo.
 - Las reglas de seguridad son el puente con la Investigación 1: no las dejes como un detalle, son parte del "producto real".

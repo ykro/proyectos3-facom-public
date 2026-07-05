@@ -36,15 +36,14 @@ Examen individual en línea con **teoría** (opción múltiple, V/F razonado, re
 
 ## Rúbrica de entrega del Proyecto 1 (cuenta en *Proyectos*, no en el examen)
 
-El **Proyecto 1 (PWA propia)** se entrega **en línea** (URL publicada o app instalable + **bitácora de prompts** + capturas). Se evalúa sobre lo entregado —**no es una defensa en vivo**— y sus puntos cuentan dentro de la categoría **Proyectos** del curso. Reparte los puntos que asignes al Proyecto 1 con estos pesos relativos:
+El **Proyecto 1 (PWA propia)** se entrega **en línea** (URL publicada o app instalable + **bitácora de prompts** + capturas). Se evalúa sobre lo entregado —**no es una defensa en vivo**— y sus puntos cuentan dentro de la categoría **Proyectos** del curso. Estos criterios reparten los puntos que el docente asigne a este proyecto dentro de la categoría *Proyectos* (30 pts en total para ambos proyectos). Califícalo con esta rúbrica:
 
-| Criterio | Qué se evalúa | Peso |
-|----------|---------------|------|
-| **Identidad visual y UX** | Mobile-first, identidad propia (no la de referencia), jerarquía, contraste/**accesibilidad AA**, estados. | 4 |
-| **Proceso y dirección de IA** | **Bitácora de prompts** (prompts clave, una decisión de diseño, un problema resuelto); criterio al dirigir a la IA. | 2 |
-| **Funcionalidad** | Lista de tarjetas, filtro por categoría y vista de detalle funcionan; navegación correcta. | 3 |
-| **Datos + PWA instalable** | Datos en Firestore en tiempo real (`onSnapshot`) y app instalable (manifest/íconos/service worker; idealmente en Cloud Run). | 3 |
-| **Total** | | **12** |
+| Criterio | Qué se evalúa | Peso relativo |
+|----------|---------------|---------------|
+| **Identidad visual y UX** | Mobile-first, identidad propia (no la de referencia), jerarquía, contraste/**accesibilidad AA**, estados. | Alto |
+| **Proceso y dirección de IA** | **Bitácora de prompts** (prompts clave, una decisión de diseño, un problema resuelto); criterio al dirigir a la IA. | Medio |
+| **Funcionalidad** | Lista de tarjetas, filtro por categoría y vista de detalle funcionan; navegación correcta. | Alto |
+| **Datos + PWA instalable** | Datos en Firestore en tiempo real (`onSnapshot`) y app instalable (manifest/íconos/service worker; idealmente en Cloud Run). | Alto |
 
 > **Bandas por criterio:** califica cada criterio como **Excelente** (cumple todo con calidad), **Aceptable** (cumple lo esencial con fallas menores) o **Insuficiente** (falta lo esencial), y asigna el puntaje dentro de su rango.
 >

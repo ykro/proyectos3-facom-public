@@ -13,7 +13,7 @@ Que el estudiante arme el **caso de portafolio** de su Proyecto Final y prepare 
 
 - Decide si habrá **invitado** (reclutador, diseñador senior o profesional de producto) y coordina su bloque.
 - Ten ejemplos de buenos casos de portafolio (problema → proceso → resultado) y de pitches efectivos.
-- Ten una plantilla de **caso de portafolio** y una de **guion de pitch** (2–3 min) para el mini-taller.
+- Ten listas la **[plantilla de caso de portafolio](../guias-estudiante/plantilla-caso-portafolio.md)** y la **[plantilla de guion de pitch](../guias-estudiante/plantilla-pitch.md)** (2–3 min) para el mini-taller, y compártelas con los estudiantes.
 
 ---
 
@@ -48,15 +48,15 @@ Que el estudiante arme el **caso de portafolio** de su Proyecto Final y prepare 
 - **Formato:** charla de **20–30 min** del invitado dentro del Bloque 2 (idealmente alguien que contrata o evalúa portafolios), seguida de **10 min de preguntas**.
 - **Briefing al invitado:** audiencia de Comunicación y Diseño que construyó apps reales con IA; enfoque en qué hace memorable un portafolio y un pitch, y qué valoran al contratar.
 - **Tu rol:** moderar, conectar con el mini-taller y aterrizar consejos al Demo Day (sesión 10).
-- **Plan B:** si cancela, usa la estructura completa de "sin invitado" y amplía los ejemplos de portafolio y pitch.
+- **Si el invitado cancela:** usa la estructura completa de "sin invitado" y amplía los ejemplos de portafolio y pitch.
 
 ---
 
 ## Mini-taller: caso de portafolio + pitch (~32 min)
 
 8. Indica el **mini-taller** en dos partes:
-   - **Caso de portafolio:** redactar el caso de su Proyecto Final con la plantilla: **problema** (qué resuelve), **proceso** (cómo lo construyó dirigiendo a la IA, con 1–2 prompts clave y capturas) y **resultado** (la app funcionando, capturas finales).
-   - **Guion de pitch (2–3 min):** escribir el guion siguiendo la anatomía (gancho, demo, proceso, cierre).
+   - **Caso de portafolio:** redactar el caso de su Proyecto Final con la **[plantilla de caso de portafolio](../guias-estudiante/plantilla-caso-portafolio.md)**: **problema** (qué resuelve), **proceso** (cómo lo construyó dirigiendo a la IA, con 1–2 prompts clave y capturas) y **resultado** (la app funcionando, capturas finales).
+   - **Guion de pitch (2–3 min):** escribir el guion con la **[plantilla de guion de pitch](../guias-estudiante/plantilla-pitch.md)**, siguiendo la anatomía (gancho, demo, proceso, cierre).
 
 9. Acompaña en vivo. Empuja a que el caso muestre **proceso**, no solo el producto final, y a que el pitch quepa en el tiempo.
 

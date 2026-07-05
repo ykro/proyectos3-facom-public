@@ -15,7 +15,7 @@ Que el estudiante agregue una **capacidad del teléfono** (la **cámara**), apre
 - Si vas a demostrar la cámara, ten un **teléfono físico** listo con **"Install on Device"** (en el emulador del navegador la cámara puede ser simulada).
 - Prueba tomar **capturas de la vista previa** y el **modo de anotación** en privado.
 - Revisa la Sección 3 de `guias-estudiante/proyecto-final-nativo.md`.
-- Prepara la mini-app de la **Demo rotativa** ("Foto del Día"): ten a mano el prompt inicial para construirla en vivo.
+- Prepara la mini-app de la **Demo del docente** ("Foto del Día"): ten a mano el prompt inicial para construirla en vivo.
 
 ---
 
@@ -100,7 +100,7 @@ Que el estudiante agregue una **capacidad del teléfono** (la **cámara**), apre
 
 ---
 
-### Demo rotativa de la sesión
+### Demo del docente de la sesión
 
 > 🎯 **Referencia visual del resultado esperado:** [ver captura](../demos/screenshots/foto-del-dia.png) · mock-up navegable: [`demos/foto-del-dia.html`](../demos/foto-del-dia.html). Reconstrúyela en vivo con el prompt de abajo (no la copies tal cual).
 

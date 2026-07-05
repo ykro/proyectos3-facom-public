@@ -2,6 +2,8 @@
 
 Bienvenida y bienvenido a **Proyectos III — Diseño de aplicaciones móviles**. En este curso vas a construir aplicaciones móviles reales **sin escribir código**: tu trabajo es diseñarlas —con buen criterio de UI/UX— y dirigir a la inteligencia artificial con instrucciones claras en español. **Todo se hace desde el navegador, en Google AI Studio.** Esta guía te prepara para empezar.
 
+> **📁 El material del curso vive en un repositorio.** Todas las guías, prompts, plantillas y referencias están en el **repositorio del curso** que el docente comparte en esta primera clase. Tenlo a mano: de ahí copiarás los prompts y consultarás las guías durante todo el trimestre.
+
 ---
 
 ## Qué vas a aprender
@@ -51,21 +53,17 @@ AI Studio instala la app en tu teléfono directo desde Chrome con el botón **"I
 
 1. Abre tu navegador y ve a [aistudio.google.com](https://aistudio.google.com).
 
-   > [Captura: página principal de Google AI Studio con el botón de inicio de sesión]
-
 2. Inicia sesión con tu cuenta de Google. Si ya tienes sesión abierta en Gmail, puede que entre automáticamente.
-
-   > [Captura: pantalla de selección de cuenta de Google]
 
 3. Si es la primera vez, acepta los términos de servicio.
 
 4. En el menú lateral izquierdo, haz clic en **Build** para entrar al modo de construcción de aplicaciones.
 
-   > [Captura: pantalla principal de AI Studio con la opción "Build" resaltada]
+   ![Pantalla principal de Google AI Studio en el modo Build: editor recién abierto con la caja "Describe an app…" para escribir el primer prompt.](img/aistudio-build.png)
 
 5. Selecciona la opción para crear una aplicación nueva. Se abre el editor con un **panel de chat** a la izquierda y una **vista previa (Live preview)** a la derecha.
 
-   > [Captura: editor de AI Studio con el panel de chat y la vista previa]
+   ![Editor de AI Studio recién abierto en modo Build, con la caja de descripción de la app lista para recibir instrucciones.](img/aistudio-build.png)
 
 Ya estás listo para empezar. El mismo editor sirve para la PWA (Proyecto 1) y para la app nativa de Android (Proyecto Final): la diferencia es solo qué tipo de app le pides a la IA.
 
@@ -86,7 +84,7 @@ Ya estás listo para empezar. El mismo editor sirve para la PWA (Proyecto 1) y p
 | **Ver diferencias (View diff)** | Junto a Code | Muestra qué cambió la IA después de cada prompt. |
 | **Settings / Secrets** | Menú superior | Configuración y valores confidenciales (claves). |
 
-> [Captura: interfaz de AI Studio con las partes señaladas]
+![Interfaz de AI Studio en modo Build con sus partes principales: la caja "Describe an app…" para escribir el prompt, y el área de editor donde luego aparecen el chat y la vista previa.](img/aistudio-build.png)
 
 > *Modelo: AI Studio usa por defecto **Gemini 3.5 Flash**. No tienes que configurarlo.*
 
@@ -141,7 +139,7 @@ Google AI Studio tiene su interfaz en inglés, pero **tú le escribes tus instru
 3. **Copia y pega los prompts.** Están escritos en la guía; cópialos tal cual.
 4. **Verifica el resultado** en la vista previa después de cada prompt. Si algo no se ve bien, la guía incluye una sección de **rescate**.
 5. **Aplica a tu propia app** en la sección **"Tu proyecto"** de cada guía. Eso es lo que entregas.
-6. **Responde el quiz** para verificar que entendiste.
+6. Al cerrar la unidad, el docente aplica un breve **quiz de verificación**.
 
 ---
 

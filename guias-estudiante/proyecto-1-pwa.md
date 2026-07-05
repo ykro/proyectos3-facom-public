@@ -17,6 +17,41 @@ Al final, en la sección **"Tu proyecto"**, aplicas todo esto a **tu propia idea
 
 ---
 
+## Antes de empezar (primera clase)
+
+Esta primera parte es de lectura, no de laboratorio. Son tres ideas cortas que te dan contexto antes de escribir tu primer prompt. Léelas con calma: entenderlas hace que todo lo demás tenga sentido.
+
+### 1. GitHub, en una servilleta
+
+**GitHub** es un lugar en internet para **guardar y compartir archivos de un proyecto**, con una particularidad: guarda también su **historial** (cada versión, quién cambió qué y cuándo). A cada proyecto se le llama **repositorio** (o "repo"): imagina una carpeta compartida con memoria.
+
+En este curso lo usamos para dos cosas sencillas: (1) el docente comparte por GitHub **el material y las guías** (como esta), y (2) si quieres, puedes **exportar tu app** desde AI Studio a un repositorio propio para tenerla guardada, versionada y lista para mostrar en tu portafolio. No necesitas dominarlo ni escribir comandos: por ahora basta con saber que un repo es "la carpeta del proyecto, en la nube, con historial".
+
+### 2. Glosario mínimo de IA generativa (lo que sí vas a usar)
+
+No necesitas teoría; solo estas palabras, en lenguaje llano:
+
+| Término | En una línea |
+|---------|--------------|
+| **Prompt** | La instrucción que le escribes a la IA. Mientras más clara y específica, mejor el resultado. |
+| **Modelo** | El "cerebro" de IA que lee tu prompt y produce una respuesta (aquí, el código de tu app). |
+| **Gemini (3.5 Flash)** | El modelo de Google que usa AI Studio por defecto. No tienes que configurarlo. |
+| **Token** | La unidad en que el modelo "trocea" el texto (pedacitos de palabras). Idea general: prompts y respuestas más largos usan más tokens. |
+| **Generar** | Cuando la IA produce algo nuevo a partir de tu prompt (el código, un texto, una imagen). |
+| **Iterar / refinar** | Mejorar el resultado con prompts sucesivos, un cambio a la vez, en lugar de pedir todo de golpe. |
+| **Checkpoint** | Un punto de guardado al que puedes regresar si un cambio sale mal (un "deshacer" de todo el proyecto). |
+| **Alucinación** | Cuando la IA inventa algo con seguridad pero está mal o no existe. Por eso siempre verificas el resultado en la vista previa. |
+| **AI Chips (Nano Banana)** | Servicios de Google que agregas sin configurar. **Nano Banana** genera imágenes (íconos, ilustraciones) desde un prompt. |
+| **Firebase / Firestore** | Los servicios de Google en la nube para tu app. **Firestore** es la base de datos (donde viven, por ejemplo, las cafeterías). AI Studio los configura solo. |
+
+### 3. ¿Cómo hace la IA todo esto?
+
+Cuando escribes un prompt en español —"quiero una guía de cafés con tarjetas y un filtro"—, el modelo (Gemini) **traduce tu intención a código**: escribe los archivos que dibujan la **interfaz** (los colores, las tarjetas, los botones), la **lógica** (qué pasa al tocar un filtro) y la conexión a los **datos** (las cafeterías). Después, AI Studio **ejecuta ese código** y te muestra el resultado funcionando en la **vista previa**, a la derecha. Tú no ves ni tocas el código: ves la app.
+
+Aquí está lo importante para ti como diseñador: **tú eres el director, y la IA es tu desarrollador junior.** La IA teclea rapidísimo y sabe de código, pero **no tiene tu criterio**: no sabe qué se ve bien, qué jerarquía comunica mejor, ni qué se siente propio de tu marca. Eso lo pones tú, con prompts claros y con la separación **Funcionalidad / Interfaz**. Piensa en un director de cine: no opera la cámara ni actúa, pero **toda decisión importante pasa por su visión**. Tu trabajo en este curso es dirigir con buen gusto y criterio; el de la IA, ejecutar.
+
+---
+
 ## Prerrequisitos
 
 - Cuenta de Google (Gmail).
@@ -38,6 +73,18 @@ Una PWA llamada "Ruta del Café" con:
 - **Identidad visual propia** y personalizable: colores, tipografía y nombre.
 - Datos guardados en **Firestore** (colección `cafeterias`).
 - Capacidad de **instalarse en el teléfono** como PWA.
+
+**Esto es lo que vamos a construir** (mock-ups de diseño, la meta):
+
+![Mock-up de la pantalla principal de Ruta del Café: encabezado vino con el título, una fila de chips para filtrar por categoría (Todos, Para trabajar, Brunch, De barrio) y tarjetas de cafeterías con imagen, nombre, zona y una etiqueta de categoría de color.](../proyectos-referencia/pwa-ejemplo/screenshots/ruta-home.png)
+
+![Mock-up de la vista de detalle de un café: imagen grande arriba, nombre "Café Barista", etiquetas de categoría y zona, especialidad, dirección, horario, descripción y un botón "Cómo llegar".](../proyectos-referencia/pwa-ejemplo/screenshots/ruta-detalle.png)
+
+**Así quedó lo generado por la IA** (una versión real construida con esta guía, con fotos y datos reales):
+
+![Vista real de Ruta del Café generada en AI Studio: encabezado "La Ruta del Grano de Oro", chips de categoría con emojis y tarjetas de cafeterías con fotografías reales de café de especialidad.](../proyectos-referencia/pwa-ejemplo/screenshots/ruta-del-cafe-app.png)
+
+> *Fíjate en la diferencia: el mock-up es el **plano** (qué queremos), y la captura real es **cómo lo resolvió la IA** a partir de tus prompts. Tu criterio de diseño es lo que acerca uno al otro.*
 
 ---
 
@@ -66,7 +113,7 @@ Toda la app gira alrededor de una colección de Firestore llamada `cafeterias`. 
 
 **Paso 1.** Abre [aistudio.google.com](https://aistudio.google.com), inicia sesión, entra a **Build** y crea una app nueva. Vas a ver el panel de chat a la izquierda y la vista previa (Live preview) a la derecha.
 
-> [Captura: editor de AI Studio recién abierto, vacío]
+![Editor de AI Studio recién abierto en modo Build, todavía vacío, con la caja "Describe an app…" lista para escribir el primer prompt.](img/aistudio-build.png)
 
 **Paso 2.** En el panel de chat, pega este **prompt inicial** completo. Es el prompt más importante: establece toda la estructura y el nivel de diseño de la app. Fíjate cómo separa **Funcionalidad** de **Interfaz**:
 
@@ -104,13 +151,11 @@ Crea una aplicación web usando React con Tailwind CSS que funcione como una gu�
 
 **Por qué funciona este prompt:** es específico en cuatro dimensiones —tecnologías, funcionalidad con campos definidos, interfaz con criterio de UI/UX, y estructura de código— y **separa qué hace de cómo se ve**, para que puedas cambiar el diseño después sin tocar la lógica.
 
-**Paso 3.** Presiona enviar (**Send**) y espera. La generación inicial puede tardar varios minutos. No cierres la pestaña. (AI Studio usa por defecto el modelo **Gemini 3.5 Flash**.)
-
-> [Captura: AI Studio generando el código, con progreso en el panel de chat]
+**Paso 3.** Presiona enviar (**Send**) y espera. La generación inicial puede tardar varios minutos. No cierres la pestaña. Verás el progreso en el panel de chat mientras la IA escribe el código. (AI Studio usa por defecto el modelo **Gemini 3.5 Flash**.)
 
 **Paso 4.** Cuando termine, revisa la **vista previa**. Deberías ver el encabezado "Ruta del Café" y una cuadrícula de tarjetas de cafeterías.
 
-> [Captura: primera versión de la app con el header y las tarjetas de cafés]
+![Primera versión de Ruta del Café generada en AI Studio: encabezado con el nombre de la app y una cuadrícula de tarjetas de cafeterías con imagen, nombre, zona, especialidad y una etiqueta de categoría.](../proyectos-referencia/pwa-ejemplo/screenshots/ruta-del-cafe-app.png)
 
 > *Tip de AI Studio: haz clic en la pestaña **Code** para ver los archivos que generó la IA. Usa **View diff** para ver exactamente qué escribió. No necesitas entender el código.*
 
@@ -246,6 +291,31 @@ Rediseña el estado vacío (cuando el filtro no encuentra cafés): un mensaje am
 
 ---
 
+### Si quieres personalizar el look a mano (opcional)
+
+Lo normal en este curso es **pedirle los cambios a la IA** con prompts (es más rápido y no rompes nada). Pero si tienes curiosidad, puedes ajustar el aspecto **a mano** desde la pestaña **Code**. No te va a pasar nada malo: siempre puedes regresar a un **checkpoint**. Aquí te explicamos, sin miedo, dónde vive cada cosa.
+
+**Cómo es la estructura de archivos que genera AI Studio.** Una PWA en React es un conjunto de archivos de texto. Los que te importan como diseñador:
+
+| Archivo (aprox.) | Qué contiene | Para qué te sirve |
+|------------------|--------------|-------------------|
+| `App.tsx` | El "armado" principal de la app: junta los componentes (Header, lista, tarjetas, filtro, detalle). | Ver cómo se ordenan las piezas de la pantalla. |
+| Componentes (ej. `TarjetaCafe.tsx`, `Header.tsx`) | Cada pieza de la interfaz en su propio archivo (una tarjeta, el encabezado, un chip). | Tocar el texto, el orden o el estilo de **una** pieza sin afectar el resto. |
+| `index.css` (o estilos con Tailwind) | Los estilos globales: colores base, tipografía, espaciados. | Aquí suelen vivir los **colores de la paleta**. |
+| `index.html` | El esqueleto y datos de la PWA (título, ícono, colores de tema). | El nombre y el color con que se instala la app. |
+
+**Dónde tocar los colores.** Los hexadecimales de la paleta vino (`#FDF6EC`, `#6D2E46`, `#C84B31`, `#E3B23C`, `#2B2B2B`) aparecen escritos tal cual en el código. Para cambiarlos a mano:
+
+1. Abre la pestaña **Code** y usa el buscador (Ctrl/Cmd + F) para buscar un color, por ejemplo `6D2E46`.
+2. Reemplázalo por tu nuevo hexadecimal **en todos los lugares donde aparezca** (a veces está en `index.css`, a veces dentro de un componente como una clase de Tailwind, p. ej. `bg-[#6D2E46]`).
+3. Guarda y mira la **vista previa**. Si algo se ve raro, usa **View diff** o regresa al **checkpoint**.
+
+**Dónde tocar la tipografía.** El tipo de letra y los tamaños suelen definirse en `index.css` (o en la configuración de Tailwind). Ahí puedes cambiar la fuente de los títulos y del cuerpo. Si prefieres no meter mano, el prompt **"Cambiar la tipografía"** de arriba hace lo mismo dirigiendo a la IA.
+
+> *Regla de oro: cambia **una cosa a la vez** y verifica en la vista previa. Si te pierdes, no pasa nada — regresa al último checkpoint. Editar a mano es opcional; pedírselo a la IA siempre es una opción válida.*
+
+---
+
 ### Sección 3 (semana 3): Datos en Firestore e instalable como PWA
 
 > ⏱ **Tiempo estimado:** ~55–70 min de laboratorio (conectar la base y publicar toma un poco más).
@@ -271,7 +341,7 @@ Rediseña el estado vacío (cuando el filtro no encuentra cafés): un mensaje am
 
 Cuando la IA detecte que necesitas base de datos, te va a ofrecer **"Enable Firebase"** (Activar Firebase). Haz clic para aprobarlo. AI Studio configura Firebase automáticamente; tú no entras a la consola de Firebase.
 
-> [Captura: aviso de AI Studio ofreciendo "Enable Firebase"]
+![Panel de AI Studio ofreciendo activar la base de datos: la opción "Enable Firebase / Firestore" que se aprueba con un clic para que AI Studio configure Firebase automáticamente.](img/aistudio-enable-firebase.png)
 
 **Paso 11.** Verifica en la vista previa que los cafés siguen apareciendo (ahora desde Firestore) y que el filtro y el detalle siguen funcionando.
 
@@ -310,9 +380,7 @@ Cuando la IA detecte que necesitas base de datos, te va a ofrecer **"Enable Fire
 
 **Por qué funciona:** menciona las tres piezas de una PWA instalable (manifest, íconos y service worker) con los valores de identidad exactos.
 
-**Paso 15.** Verifica que la app sea instalable (ícono de instalar en la barra de Chrome; en el teléfono, "Agregar a pantalla de inicio").
-
-> [Captura: navegador mostrando la opción de instalar la PWA]
+**Paso 15.** Verifica que la app sea instalable: en el escritorio verás un ícono de instalar en la barra de direcciones de Chrome; en el teléfono aparecerá la opción "Agregar a pantalla de inicio".
 
 **Paso 16.** (Recomendado) **Publica** tu app con **Cloud Run** para abrirla desde el teléfono. Busca **Deploy** / Cloud Run en AI Studio, apruébalo y espera la dirección (URL). Ábrela en tu teléfono e instala la PWA.
 
@@ -387,6 +455,19 @@ Los estilos se ven rotos: los colores no son los correctos o el espaciado está 
 
 ---
 
+## Tu bitácora de prompts (entregable)
+
+> **Qué es.** Un documento tuyo (Google Doc, Notas, lo que uses) donde vas registrando **cómo dirigiste a la IA** para construir tu app. No es adorno: es un **entregable que cuenta en tu nota (rubro Proyectos)** y, además, es **material permitido en los exámenes** (parcial y final). Empiézala desde el primer prompt.
+>
+> **Formato mínimo** (ve llenándolo sobre la marcha):
+> - **Prompts clave:** copia y pega los prompts más importantes que usaste (el inicial y los refinamientos que de verdad movieron la app). No hace falta pegar todos; sí los que marcaron el rumbo.
+> - **Una decisión de diseño:** describe en 2–4 líneas una elección de UI/UX que tomaste tú (por ejemplo: "cambié el color de los badges para que 'Brunch' se leyera por contraste") y **por qué**.
+> - **Un problema que resolviste:** algo que salió mal y cómo lo arreglaste (qué prompt de rescate usaste, o si regresaste a un checkpoint con la regla de los 2 strikes).
+>
+> *Tip: es tu registro de que **tú dirigiste el proceso**. En el examen te sirve para explicar tu criterio, no solo el resultado.*
+
+---
+
 ## Tu proyecto (entregable del Proyecto 1)
 
 Ya construiste la app de referencia. **Ahora te toca crear la tuya.** En lugar de una guía de cafés, elige una idea de app que te interese y que tenga la misma estructura: una **lista de tarjetas**, un **filtro por categoría** y una **vista de detalle**, con datos en **Firestore** e **instalable como PWA**.
@@ -409,7 +490,7 @@ Ideas: un directorio de **antojitos**, un catálogo de **recetas**, una guía de
 - La dirección (URL) de tu PWA publicada, instalable en el teléfono.
 - Una app con lista de tarjetas, filtro por categoría, vista de detalle, identidad visual propia y datos en Firestore.
 
-> *Tip: guarda copias de tus prompts en un documento. Te van a servir para explicar tu proceso en el examen parcial y para reusarlos.*
+> *Tip: mantén al día tu **bitácora de prompts** (ver la sección anterior). Es un entregable que cuenta en la nota y es material permitido en el examen parcial: te sirve para explicar tu proceso y para reusar tus prompts.*
 
 ---
 

@@ -42,6 +42,20 @@ Una app nativa de Android, "Bitácora Visual", con:
 - **Ícono propio** y pantalla de inicio (**splash**) con la marca.
 - Identidad visual con la paleta de marca: vino #6D2E46, terracota #C84B31, mostaza #E3B23C, fondo crema #FDF6EC y texto #2B2B2B.
 
+**Esto es lo que vamos a construir** (mock-ups de diseño, la meta):
+
+![Mock-up de la pantalla de inicio de sesión de Bitácora Visual: fondo vino, ícono de cámara al centro, el nombre "Bitácora Visual", una frase corta y un botón blanco "Iniciar sesión con Google".](../proyectos-referencia/nativo-ejemplo/screenshots/bitacora-login.png)
+
+![Mock-up de la bitácora en cuadrícula de 2 columnas: barra superior "Mi bitácora" con avatar, tarjetas de entradas (foto, título y fecha), un botón flotante de cámara y una barra de navegación inferior con Bitácora, Buscar y Perfil.](../proyectos-referencia/nativo-ejemplo/screenshots/bitacora-grid.png)
+
+![Mock-up del formulario "Nueva entrada": vista previa de la foto arriba con un botón "Volver a tomar", campos de título y nota, y un botón "Guardar entrada" en color vino.](../proyectos-referencia/nativo-ejemplo/screenshots/bitacora-captura.png)
+
+**Así quedó lo generado por la IA** (una versión real construida con esta guía):
+
+![Vista real de Bitácora Visual generada en AI Studio, corriendo en el emulador: pantalla de inicio con el ícono de cámara, el nombre, un botón "Iniciar sesión con Google" y la opción "Entrar en Modo Local".](../proyectos-referencia/nativo-ejemplo/screenshots/bitacora-visual-app.png)
+
+> *El mock-up es la **meta de diseño**; la captura real es **cómo lo resolvió la IA** con tus prompts. Notarás detalles distintos (aquí, por ejemplo, apareció un "Modo Local"): es normal, y ahí entra tu criterio para acercarlo a lo que buscas.*
+
 ## La colección de datos: `entradas`
 
 | Campo | Tipo | Descripción |
@@ -60,7 +74,7 @@ Una app nativa de Android, "Bitácora Visual", con:
 
 **Paso 1.** Abre [aistudio.google.com](https://aistudio.google.com), inicia sesión, entra a **Build** y crea una app nueva, igual que en el Proyecto 1. La diferencia es que esta vez le pides una **app nativa de Android**.
 
-> [Captura: editor de AI Studio recién abierto, listo para el primer prompt]
+![Editor de AI Studio recién abierto en modo Build, listo para el primer prompt, con la caja "Describe an app…" donde escribirás la app nativa.](img/aistudio-build.png)
 
 **Paso 2.** Pega este **prompt inicial**. Fíjate en que la primera línea deja claro que queremos una app **nativa de Android con Kotlin y Jetpack Compose**, y en la separación **Funcionalidad / Interfaz**:
 
@@ -91,19 +105,15 @@ Crea una app nativa de Android usando Kotlin y Jetpack Compose (Material 3) llam
 
 **Por qué funciona:** dice el tipo de app (nativa, Kotlin + Compose) en la primera línea y **separa qué hace de cómo se ve**, con dirección de UI/UX explícita.
 
-**Paso 3.** Presiona **Send** y espera (varios minutos). No cierres la pestaña. (AI Studio usa por defecto **Gemini 3.5 Flash**.)
-
-> [Captura: AI Studio generando el proyecto nativo]
+**Paso 3.** Presiona **Send** y espera (varios minutos). No cierres la pestaña. Verás el progreso en el panel de chat mientras la IA genera el proyecto nativo. (AI Studio usa por defecto **Gemini 3.5 Flash**.)
 
 **Paso 4.** Revisa la **vista previa**: AI Studio muestra un **emulador de Android integrado en el navegador**. Deberías ver la barra "Bitácora Visual" y la cuadrícula de entradas de ejemplo con el botón "+".
 
-> [Captura: emulador del navegador con la bitácora de ejemplo]
+![App nativa Bitácora Visual corriendo en el emulador de Android integrado en el navegador de AI Studio, con el botón "Install" para instalarla en el teléfono.](img/aistudio-emulador.png)
 
 > *Tip: la vista previa se actualiza sola tras cada cambio; no "corres" nada. Usa **Code** para ver los archivos Kotlin y **View diff** para ver qué cambió.*
 
 **Paso 5.** (Recomendado) Prueba la app en tu **teléfono real**. Conéctalo por USB (con modo de desarrollador y depuración USB activados) y usa **"Install on Device"** en el panel de vista previa. Chrome muestra un selector para elegir tu teléfono; acepta, y la app se instala y abre sola.
-
-> [Captura: botón "Install on Device" y el selector de dispositivo USB de Chrome]
 
 > *No necesitas ADB ni el SDK de Android: AI Studio instala la app directo desde el navegador.*
 
@@ -143,7 +153,7 @@ Crea una app nativa de Android usando Kotlin y Jetpack Compose (Material 3) llam
 
 Cuando AI Studio detecte que necesitas autenticación, te ofrecerá **"Enable Firebase"**. Apruébalo. AI Studio configura Firebase automáticamente (Authentication, Firestore y Storage); tú no entras a la consola ni manejas archivos de configuración.
 
-> [Captura: pantalla de login con "Iniciar sesión con Google" en el emulador]
+![Pantalla de login de Bitácora Visual: tarjeta centrada con el nombre de la app en vino, una frase corta y un botón "Iniciar sesión con Google" sobre fondo crema.](../proyectos-referencia/nativo-ejemplo/screenshots/bitacora-visual-app.png)
 
 **Paso 7.** Prueba el login. Para probarlo de verdad con tu cuenta, usa **"Install on Device"** en tu teléfono.
 
@@ -286,6 +296,29 @@ Agrega una pantalla de detalle al tocar una entrada: foto grande, título, la no
 
 ---
 
+### Si quieres personalizar el look a mano (opcional)
+
+Igual que en el Proyecto 1, lo normal es **pedirle los cambios a la IA**. Pero una app nativa también son archivos de texto (aquí en **Kotlin**), y desde la pestaña **Code** puedes ajustar el aspecto a mano. Con un **checkpoint** guardado, no hay nada que temer.
+
+**Cómo es la estructura de una app nativa (a alto nivel).** Una app de Android con Jetpack Compose se organiza así:
+
+| Archivo (aprox.) | Qué contiene | Para qué te sirve |
+|------------------|--------------|-------------------|
+| `Color.kt` | La lista de **colores** de la marca, cada uno con un nombre (ej. `val Vino = Color(0xFF6D2E46)`). | Aquí viven los hexadecimales de tu paleta. |
+| `Theme.kt` | El **tema** Material 3: conecta esos colores con roles (`primary`, `background`, `surface`…) que usa toda la app. | Cambiar el tema entero desde un solo lugar. |
+| `Type.kt` | La **tipografía**: fuentes y tamaños de títulos, cuerpo, etc. | Ajustar la escala tipográfica. |
+| Pantallas (composables, ej. `BitacoraScreen.kt`, `NuevaEntradaScreen.kt`) | Cada pantalla es una **función composable** que describe la interfaz (la cuadrícula, el FAB, el formulario). | Tocar el diseño o el texto de **una** pantalla. |
+
+> *Nota: en Kotlin los colores se escriben con `0xFF` delante del hexadecimal. `#6D2E46` se ve en el código como `0xFF6D2E46`. Es el mismo color, solo cambia la forma de escribirlo.*
+
+**Dónde tocar los colores.** Abre **Code**, busca (Ctrl/Cmd + F) `6D2E46` o el nombre `Vino`, y verás la definición en `Color.kt`. Cambia el valor ahí y **todo el tema** se actualiza, porque las pantallas usan los roles del tema (`MaterialTheme.colorScheme.primary`), no el color suelto. Por eso, tocando `Color.kt` y `Theme.kt` cambias el look de forma consistente.
+
+**Dónde tocar la tipografía.** En `Type.kt` están las fuentes y tamaños. Ahí cambias el tipo de letra de los títulos y del cuerpo. Si prefieres no meter mano, el prompt **"Tipografía editorial"** de arriba hace lo mismo dirigiendo a la IA.
+
+> *Regla de oro: un cambio a la vez, verifica en el emulador y, si te pierdes, regresa al **checkpoint**. Editar a mano es opcional; pedírselo a la IA siempre vale.*
+
+---
+
 ## Rescate: problemas comunes
 
 > *Regla de los **2 strikes**: si una corrección no funciona, intenta una vez más; si tampoco, regresa al último **checkpoint** funcional.*
@@ -356,7 +389,8 @@ Ya construiste la app de referencia. **Ahora la haces tuya.** Puedes quedarte co
 3. **Agrega una etiqueta/categoría** a cada entrada (por ejemplo: Color, Tipografía, Textura, Composición, Idea) y un **filtro**, reusando lo que aprendiste en el Proyecto 1.
 4. **Personaliza la interfaz** con los prompts de "Personalización de interfaz" hasta que se sienta tuya.
 5. **Cuida los detalles:** ícono, splash y capturas.
-6. **Prepara tu pitch para el Demo Day.** En 2–3 minutos: qué es, demo en vivo (login, capturar una entrada con la cámara, verla en la bitácora) y por qué te sirve como creativo.
+6. **Prepara tu pitch para el Demo Day** con la [plantilla de pitch](plantilla-pitch.md). En 2–3 minutos: qué es, demo en vivo (login, capturar una entrada con la cámara, verla en la bitácora) y por qué te sirve como creativo.
+7. **Arma tu caso de portafolio** con la [plantilla de caso de portafolio](plantilla-caso-portafolio.md) (problema → proceso → resultado). Si preparas la ficha para la tienda, usa la [plantilla de ficha de tienda](plantilla-ficha-tienda.md).
 
 ### Qué entregas
 
@@ -365,6 +399,7 @@ Ya construiste la app de referencia. **Ahora la haces tuya.** Puedes quedarte co
 - Ícono y splash con tu marca.
 - Tu **pitch del Demo Day** preparado.
 - Una o dos capturas de tu app terminada.
+- Tu **bitácora de prompts** al día (mismo entregable que en el Proyecto 1: ver "Tu bitácora de prompts" en `proyecto-1-pwa.md`). Registra tus prompts clave, una decisión de diseño y un problema que resolviste. **Cuenta en la nota** y es **material permitido en el examen final**.
 
 > *Tip de empleabilidad: construir una app nativa real es una pieza fuerte para tu CV y tus redes. Demuestra que sabes diseñar y llevar una app hasta el dispositivo.*
 

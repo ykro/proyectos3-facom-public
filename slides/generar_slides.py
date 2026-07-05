@@ -12,8 +12,9 @@ Cada deck incluye, según la sesión: portada, agenda, slides de contenido,
 diagramas de flujo, estadísticas con fuente citada, capturas reales de las
 apps del curso (assets/), laboratorio y cierre.
 
-La "Demo rotativa" NO aparece en los slides: vive solo en las instrucciones
-del docente.
+Cada sesión de contenido incluye además un slide de "Demo del docente":
+la mini-app distinta que el docente construye EN VIVO para ilustrar el
+concepto del día (no es lo que el estudiante entrega).
 
 Ejecutar con:
     uv run --with python-pptx python slides/generar_slides.py
@@ -41,7 +42,7 @@ MOSTAZA   = RGBColor(0xE3, 0xB2, 0x3C)   # acento
 VERDE     = RGBColor(0x4F, 0x77, 0x2D)   # extra
 AZUL      = RGBColor(0x3A, 0x6B, 0x7E)   # extra
 TEXTO     = RGBColor(0x2B, 0x2B, 0x2B)   # texto principal
-MUTED     = RGBColor(0x8A, 0x7C, 0x70)   # texto secundario
+MUTED     = RGBColor(0x6F, 0x64, 0x5B)   # texto secundario (AA sobre crema; igual que el sistema de diseño)
 LINE      = RGBColor(0xEA, 0xDD, 0xC8)   # separadores
 
 SLIDE_W = Inches(13.333)
@@ -304,6 +305,131 @@ def _place_phone(slide, image, left, top, ph_h, ph_w):
                   Inches(0.5), [(caption, 13, VINO, True, 0)], align=PP_ALIGN.CENTER)
 
 
+def _png_size(path):
+    """Lee ancho/alto de un PNG sin dependencias (cabecera IHDR)."""
+    try:
+        with open(path, "rb") as f:
+            head = f.read(24)
+    except OSError:
+        return None
+    if len(head) < 24 or head[:8] != b"\x89PNG\r\n\x1a\n":
+        return None
+    import struct
+    w, h = struct.unpack(">II", head[16:24])
+    return w, h
+
+
+def _place_image_fit(slide, path, box_left, box_top, box_w, box_h, frame=True):
+    """Coloca una imagen ajustada DENTRO de la caja, respetando su proporción
+    (sirve para capturas verticales de teléfono y horizontales de navegador)."""
+    size = _png_size(path) if os.path.exists(path) else None
+    if not size:
+        _add_rect(slide, box_left, box_top, box_w, box_h, CREMA_2, rounded=True, line_color=LINE)
+        _add_text(slide, box_left, box_top + box_h // 2 - Inches(0.3), box_w, Inches(0.6),
+                  [("[captura pendiente]", 13, MUTED, False, 0)], align=PP_ALIGN.CENTER)
+        return
+    w_px, h_px = size
+    ratio = h_px / w_px  # alto / ancho
+    disp_w = box_w
+    disp_h = Emu(int(disp_w * ratio))
+    if disp_h > box_h:
+        disp_h = box_h
+        disp_w = Emu(int(disp_h / ratio))
+    left = box_left + (box_w - disp_w) // 2
+    top = box_top + (box_h - disp_h) // 2
+    if frame:
+        _add_rect(slide, left - Inches(0.05), top - Inches(0.05),
+                  disp_w + Inches(0.1), disp_h + Inches(0.1), CARD,
+                  rounded=True, line_color=VINO)
+    slide.shapes.add_picture(path, left, top, width=disp_w, height=disp_h)
+
+
+def add_pair(prs, title, mockup, mockup_caption, real, real_caption,
+             kicker="Meta y resultado"):
+    """Empareja el mock-up de referencia (\"esto vamos a construir\") con la
+    captura real (\"así quedó, generado por la IA\"), lado a lado."""
+    slide = _blank(prs)
+    _title_block(slide, title, kicker=kicker, bar=MOSTAZA)
+    cols = [
+        (mockup, mockup_caption, "1 · Esto vamos a construir", "Mock-up de referencia", AZUL),
+        (real,   real_caption,   "2 · Así quedó, generado por la IA", "Captura real de la app", VINO),
+    ]
+    w = Inches(5.85)
+    gap = Inches(0.4)
+    left0 = Inches(0.72)
+    top = Inches(2.2)
+    header_h = Inches(0.72)
+    for i, (name, cap, label, sub, color) in enumerate(cols):
+        lx = left0 + i * (w + gap)
+        _add_rect(slide, lx, top, w, header_h, color, rounded=True)
+        _add_text(slide, lx + Inches(0.28), top + Inches(0.05), w - Inches(0.55),
+                  header_h - Inches(0.1),
+                  [(label, 17, CARD, True, 0), (sub, 12, CREMA, False, 0)],
+                  anchor=MSO_ANCHOR.MIDDLE, space_after=1)
+        box_top = top + header_h + Inches(0.18)
+        box_h = Inches(3.7)
+        _place_image_fit(slide, os.path.join(ASSETS, name + ".png"), lx, box_top, w, box_h)
+        if cap:
+            _add_text(slide, lx, box_top + box_h + Inches(0.05), w, Inches(0.5),
+                      [(cap, 13, VINO, True, 0)], align=PP_ALIGN.CENTER)
+    return slide
+
+
+def add_demo(prs, app_name, concept, image, kicker="Demo del docente · en vivo"):
+    """Slide de la mini-app que el DOCENTE construye en vivo esta sesión para
+    ilustrar el concepto del día. NO es lo que el estudiante entrega: el
+    laboratorio del estudiante sigue en la app insignia + su propia idea.
+    concept: lista de líneas cortas (1–2). image: nombre de asset (sin .png)."""
+    slide = _blank(prs)
+    _title_block(slide, app_name, kicker=kicker, bar=VERDE)
+    # Columna izquierda: concepto + aclaración
+    txt_left = Inches(0.98)
+    txt_w = Inches(7.2)
+    _add_rect(slide, txt_left, Inches(2.35), txt_w, Inches(0.62), CREMA_2, rounded=True)
+    _add_text(slide, txt_left + Inches(0.3), Inches(2.45), txt_w - Inches(0.6), Inches(0.5),
+              [("El docente la construye en vivo — no es tu entrega", 17, VINO, True, 0)],
+              anchor=MSO_ANCHOR.MIDDLE)
+    _add_bullets(slide, txt_left, Inches(3.25), txt_w, Inches(2.3),
+                 concept, size=22, space=14)
+    _add_text(slide, txt_left, Inches(5.75), txt_w, Inches(1.3),
+              [("Ilustra el concepto del día con una app distinta. Tu laboratorio "
+                "sigue en la app insignia y en tu propia idea.", 15, MUTED, False, 0)])
+    # Columna derecha: captura real de la mini-app
+    box_left = Inches(8.55)
+    box_w = Inches(4.0)
+    _place_image_fit(slide, os.path.join(ASSETS, image + ".png"),
+                     box_left, Inches(2.3), box_w, Inches(4.7))
+    _add_text(slide, box_left, Inches(7.02), box_w, Inches(0.4),
+              [("Captura real de la demo", 12, VINO, True, 0)], align=PP_ALIGN.CENTER)
+    return slide
+
+
+def add_glossary(prs, title, terms, kicker="Vocabulario mínimo"):
+    """terms: lista de (término, definición corta). Rejilla de 2 columnas."""
+    slide = _blank(prs)
+    _title_block(slide, title, kicker=kicker, bar=VERDE)
+    n = len(terms)
+    per = (n + 1) // 2
+    col_w = Inches(5.85)
+    gap = Inches(0.4)
+    left0 = Inches(0.72)
+    top0 = Inches(2.2)
+    row_h = Inches(0.86)
+    row_gap = Inches(0.11)
+    for i, (term, definition) in enumerate(terms):
+        col = i // per
+        row = i % per
+        lx = left0 + col * (col_w + gap)
+        ty = top0 + row * (row_h + row_gap)
+        _add_rect(slide, lx, ty, col_w, row_h, CARD, rounded=True, line_color=LINE)
+        _add_rect(slide, lx, ty, Inches(0.1), row_h, MOSTAZA)
+        _add_text(slide, lx + Inches(0.28), ty + Inches(0.06), col_w - Inches(0.5),
+                  row_h - Inches(0.12),
+                  [(term, 15, VINO, True, 0), (definition, 12.5, TEXTO, False, 0)],
+                  anchor=MSO_ANCHOR.MIDDLE, space_after=1)
+    return slide
+
+
 def add_lab(prs, title_lab, bullets):
     slide = _blank(prs)
     _add_rect(slide, Inches(0.7), Inches(0.7), Inches(11.93), Inches(6.1), CARD,
@@ -353,6 +479,12 @@ def build_deck(spec, out_path):
     add_agenda(prs, spec["agenda"])
     for c in spec["content"]:
         add_content(prs, c["title"], c["bullets"], kicker=c.get("kicker"))
+    if spec.get("demo"):
+        d = spec["demo"]
+        add_demo(prs, d["app"], d["concept"], d["image"],
+                 kicker=d.get("kicker", "Demo del docente · en vivo"))
+    for g in spec.get("glossary", []):
+        add_glossary(prs, g["title"], g["terms"], kicker=g.get("kicker", "Vocabulario mínimo"))
     for d in spec.get("diagrams", []):
         add_diagram(prs, d["title"], d["steps"], kicker=d.get("kicker", "Cómo funciona"),
                     footnote=d.get("footnote"))
@@ -364,6 +496,9 @@ def build_deck(spec, out_path):
     for sc in spec.get("screens", []):
         add_screens(prs, sc["title"], sc["images"], kicker=sc.get("kicker", "En pantalla"),
                     bullets=sc.get("bullets"))
+    for p in spec.get("pairs", []):
+        add_pair(prs, p["title"], p["mockup"], p.get("mockup_caption"),
+                 p["real"], p.get("real_caption"), kicker=p.get("kicker", "Meta y resultado"))
     add_lab(prs, spec["lab"]["title"], spec["lab"]["bullets"])
     add_closing(prs, spec["closing"]["recap"], spec["closing"]["tareas"])
 
@@ -405,7 +540,7 @@ DECKS = [
                 "Proyecto 1 (PWA): \"Ruta del Café\", semanas 1–3",
                 "Se evalúa en el Examen Parcial (sesión 5)",
                 "Proyecto Final (nativa): \"Bitácora Visual\", semanas 4, 6 y 7",
-                "Se evalúa en el Demo Day (sesión 10)",
+                "Se entrega y se muestra en el Demo Day (sesión 10)",
             ]},
             {"title": "Panorama de herramientas", "kicker": "Con qué construimos", "bullets": [
                 "Google AI Studio (modo Build): todo desde el navegador (Chrome)",
@@ -422,8 +557,33 @@ DECKS = [
                 "Patrones: tarjetas (cards), filtros, vista de detalle, navegación",
                 "Cuidar los estados: vacío, cargando y error",
             ]},
+            {"title": "GitHub: guardar y compartir tu trabajo", "kicker": "Opcional y muy simple", "bullets": [
+                "Un repositorio (repo) es como una carpeta en la nube con el historial de tu proyecto",
+                "Sirve para guardar versiones, no perder trabajo y compartir con otras personas",
+                "AI Studio puede exportar tu app a GitHub con un clic (opcional en el curso)",
+                "Piénsalo como tu portafolio de código: tu app vive ahí y la puedes mostrar",
+            ]},
+        ],
+        "glossary": [
+            {"title": "Glosario mínimo de IA generativa", "kicker": "Vocabulario para diseño", "terms": [
+                ("Prompt", "La instrucción en español que le das a la IA para crear o cambiar algo."),
+                ("Modelo (Gemini 3.5 Flash)", "El \"cerebro\" de IA que genera; el que usa AI Studio por defecto."),
+                ("Token", "La unidad mínima de texto que la IA procesa (trozos de palabras)."),
+                ("Generar", "Cuando la IA produce el código y la app a partir de tu prompt."),
+                ("Iterar / refinar", "Mejorar la app pidiendo un cambio a la vez."),
+                ("Checkpoint", "Un punto guardado al que puedes volver (como guardar la partida)."),
+                ("Alucinación", "Cuando la IA inventa algo incorrecto; siempre hay que verificar."),
+                ("AI Chips (Nano Banana)", "Servicios de Google dentro de AI Studio; Nano Banana genera imágenes."),
+                ("Firebase", "La nube de Google: datos (Firestore), login (Auth) y archivos (Storage)."),
+            ]},
         ],
         "diagrams": [
+            {"title": "¿Cómo hace la IA todo esto?", "kicker": "Para diseño",
+             "steps": [("Prompt en español", "tu instrucción"),
+                       ("La IA escribe el código", "interfaz + lógica + datos"),
+                       ("Vista previa", "la app corriendo")],
+             "footnote": "Tú diriges con criterio de diseño; la IA es como un desarrollador junior muy "
+                         "rápido: ella escribe el código, tú decides qué se construye y cómo se ve."},
             {"title": "Cómo se dirige a la IA", "kicker": "Flujo de trabajo",
              "steps": [("Prompt inicial", "detallado"), ("Vista previa", "revisar"),
                        ("Refinar", "un cambio"), ("Checkpoint", "guardar")],
@@ -452,6 +612,20 @@ DECKS = [
                  "Hoy la construyes y aplicas tu primer refinamiento",
              ]},
         ],
+        "pairs": [
+            {"title": "Ruta del Café: la meta y el resultado",
+             "mockup": "ruta-home", "mockup_caption": "El mock-up de referencia (la guía)",
+             "real": "ruta-real", "real_caption": "La app generada por la IA en AI Studio"},
+        ],
+        "demo": {
+            "app": "Antojitos Chapines",
+            "image": "demo-antojitos",
+            "concept": [
+                "Catálogo de antojitos callejeros de Guatemala (PWA)",
+                "Mismo patrón que Ruta del Café: tarjetas, filtro y estética de marca",
+                "El docente la arma en vivo con un solo prompt inicial detallado",
+            ],
+        },
         "lab": {"title": "Laboratorio 1 — Tu primera app en AI Studio", "bullets": [
             "Crea una app nueva en AI Studio (modo Build)",
             "Pega el prompt inicial de \"Ruta del Café\"",
@@ -508,6 +682,13 @@ DECKS = [
                 "Más preciso que describirlo solo con palabras",
                 "Ideal para pulir detalles visuales",
             ]},
+            {"title": "Dónde viven los colores y estilos (PWA)", "kicker": "Vocabulario de diseño, no programación", "bullets": [
+                "La pestaña Code muestra los archivos que generó la IA; no hay que escribirlos, solo saber leerlos",
+                "Los colores suelen vivir juntos (config de estilos): ahí cambias la paleta de toda la app",
+                "La tipografía y los tamaños se definen una vez y se reutilizan: consistencia por diseño",
+                "Puedes ajustar a mano un valor (por ejemplo un hexadecimal) y ver el cambio en la vista previa",
+                "Aun así, lo normal es pedir el cambio por prompt; editar a mano es solo para retoques finos",
+            ]},
         ],
         "diagrams": [
             {"title": "La navegación de un prototipo", "kicker": "Lista → detalle → volver",
@@ -520,6 +701,15 @@ DECKS = [
             {"title": "Lista y detalle en Ruta del Café", "kicker": "Lo que agregamos hoy",
              "images": [("ruta-home", "Lista con filtro"), ("ruta-detalle", "Vista de detalle")]},
         ],
+        "demo": {
+            "app": "Adopta un Peludo",
+            "image": "demo-adopta",
+            "concept": [
+                "Mascotas en adopción, con su ficha de detalle (PWA)",
+                "Ilustra el flujo lista → detalle → volver y una identidad visual propia",
+                "El docente la construye y la pule en vivo con el modo de anotación",
+            ],
+        },
         "lab": {"title": "Laboratorio 2 — Prototipo navegable", "bullets": [
             "Guarda un checkpoint antes de refinar",
             "Agrega el filtro por categoría (con \"Todas\")",
@@ -600,6 +790,20 @@ DECKS = [
                  "Publicada en Cloud Run con su propia URL",
              ]},
         ],
+        "pairs": [
+            {"title": "Ruta del Café terminada: mock-up y app real",
+             "mockup": "ruta-home", "mockup_caption": "Lo que diseñamos como referencia",
+             "real": "ruta-real", "real_caption": "Con datos de Firestore y lista para instalar"},
+        ],
+        "demo": {
+            "app": "Recetario Rápido",
+            "image": "demo-recetario",
+            "concept": [
+                "Recetas guardadas en la nube con Firestore (PWA)",
+                "Muestra datos en tiempo real y un formulario para crear registros",
+                "El docente conecta Firebase en vivo con \"Enable Firebase\"",
+            ],
+        },
         "lab": {"title": "Laboratorio 3 — PWA con datos, instalable", "bullets": [
             "Guarda un checkpoint (cambio grande)",
             "Conecta tu app a Firestore y aprueba \"Enable Firebase\"",
@@ -650,6 +854,13 @@ DECKS = [
                 "\"Install on Device\": instala en tu teléfono por USB (WebUSB)",
                 "Sin ADB ni SDK; solo modo de desarrollador + depuración USB",
             ]},
+            {"title": "Estructura de una app Android y su tema (Material 3)", "kicker": "Vocabulario de diseño, no programación", "bullets": [
+                "El tema (theme) reúne colores, tipografías y formas: es el sistema visual de toda la app",
+                "El color scheme de Material 3 —primario, secundario, fondo, superficie— es donde va tu paleta de marca",
+                "Las pantallas (screens) y los componentes (Compose) se organizan en archivos separados",
+                "Los recursos —íconos, colores, textos— viven aparte para poder reutilizarse",
+                "Cambias el tema una vez y toda la app se ve consistente; lo diriges con prompts",
+            ]},
         ],
         "compare": [
             {"title": "PWA vs app nativa", "kicker": "Cuándo cada una",
@@ -678,6 +889,15 @@ DECKS = [
                  "Con \"Install on Device\" la instalas en tu teléfono por USB",
              ]},
         ],
+        "demo": {
+            "app": "Mi Estantería",
+            "image": "demo-estanteria",
+            "concept": [
+                "Registro de libros leídos, app nativa de Android (Kotlin + Compose)",
+                "Ilustra Material 3 como vocabulario de diseño y el emulador del navegador",
+                "El docente la genera en vivo y la prueba con \"Install on Device\"",
+            ],
+        },
         "lab": {"title": "Laboratorio 4 — App nativa en el emulador del navegador", "bullets": [
             "Crea una app nueva en AI Studio (modo Build)",
             "Pide una app nativa de Android (Kotlin + Jetpack Compose) \"Bitácora Visual\"",
@@ -747,6 +967,20 @@ DECKS = [
              "images": [("bitacora-login", "Iniciar sesión con Google"),
                         ("bitacora-grid", "Solo mis entradas (filtradas por uid)")]},
         ],
+        "pairs": [
+            {"title": "Bitácora Visual: la meta y el resultado",
+             "mockup": "bitacora-grid", "mockup_caption": "El mock-up de referencia (la guía)",
+             "real": "bitacora-real", "real_caption": "La app nativa generada por la IA"},
+        ],
+        "demo": {
+            "app": "Diario de Viajes",
+            "image": "demo-diario",
+            "concept": [
+                "Diario privado por usuario, app nativa de Android",
+                "Ilustra login con Google y datos separados por uid en Firestore",
+                "El docente entra con dos cuentas para mostrar que cada quien ve solo lo suyo",
+            ],
+        },
         "lab": {"title": "Laboratorio 5 — App nativa con datos y login", "bullets": [
             "Agrega login con Google y aprueba la activación de Firebase",
             "Conecta las entradas a Firestore filtrando por uid",
@@ -822,6 +1056,20 @@ DECKS = [
                  "Ícono y splash con tu marca la vuelven un producto",
              ]},
         ],
+        "pairs": [
+            {"title": "Bitácora Visual pulida: mock-up y app real",
+             "mockup": "bitacora-captura", "mockup_caption": "El mock-up de captura (referencia)",
+             "real": "bitacora-real", "real_caption": "La app nativa pulida, ya un producto"},
+        ],
+        "demo": {
+            "app": "Foto del Día",
+            "image": "demo-foto",
+            "concept": [
+                "Una foto al día, app nativa cámara-first de Android",
+                "Ilustra permisos de cámara, subida a Storage y pulido de marca",
+                "El docente toma una foto en vivo y la ve aparecer en la app",
+            ],
+        },
         "lab": {"title": "Laboratorio 6 — App nativa con cámara, pulida", "bullets": [
             "Agrega \"Tomar foto\" con la cámara (con permiso)",
             "Verifica que la foto tomada sube a Storage",

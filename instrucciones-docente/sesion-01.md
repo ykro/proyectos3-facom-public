@@ -48,7 +48,7 @@ Que el estudiante entienda de qué trata el curso, configure su entorno y constr
 
 > El laboratorio del estudiante es "Ruta del Café" (la app insignia de la guía). Para la demo en vivo usa una **mini-app distinta** —así ven la técnica aplicada a otro tema y no copian el resultado tal cual—.
 
-#### Demo rotativa de la sesión: "Antojitos Chapines"
+#### Demo del docente de la sesión: "Antojitos Chapines"
 
 > 🎯 **Referencia visual del resultado esperado:** [ver captura](../demos/screenshots/antojitos-chapines.png) · mock-up navegable: [`demos/antojitos-chapines.html`](../demos/antojitos-chapines.html). Reconstrúyela en vivo con el prompt de abajo (no la copies tal cual).
 
