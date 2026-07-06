@@ -78,7 +78,6 @@ Ya estás listo para empezar. El mismo editor sirve para la PWA (Proyecto 1) y p
 | **Botón de enviar (Send)** | Parte inferior del chat | Envía tu mensaje a la IA. |
 | **Pestaña de código (Code)** | Parte superior del panel derecho | Ver el código que la IA generó. No necesitas entenderlo. |
 | **Install on Device** | Panel de vista previa (app nativa) | Instala la app nativa en tu teléfono por USB, desde Chrome, con un clic. |
-| **AI Chips** | Cerca de la caja de prompts | Servicios de Google sin configurar (por ejemplo, **Nano Banana** para generar imágenes). |
 | **Modo de anotación** | Dentro de la vista previa | Haz clic o dibuja sobre un elemento para indicar qué cambiar. |
 | **Checkpoints** | Panel izquierdo, junto al historial | Puntos de guardado para regresar si algo sale mal. |
 | **Ver diferencias (View diff)** | Junto a Code | Muestra qué cambió la IA después de cada prompt. |
@@ -113,7 +112,6 @@ Google AI Studio tiene su interfaz en inglés, pero **tú le escribes tus instru
 | **Code** | Ver el código generado |
 | **Install on Device** | Instalar en el teléfono (app nativa, por USB) |
 | **Annotation mode** | Modo de anotación |
-| **AI Chips** | Servicios de Google que agregas sin configuración |
 | **Checkpoint** | Punto de guardado |
 | **View diff** | Ver qué cambió |
 | **Settings / Secrets** | Configuración / valores confidenciales |
@@ -166,7 +164,7 @@ Google AI Studio tiene su interfaz en inglés, pero **tú le escribes tus instru
 | **Emulador** | Un teléfono Android **simulado**. En este curso vive **dentro del navegador**, en la vista previa de AI Studio. |
 | **Install on Device** | El botón de AI Studio que **instala la app nativa en tu teléfono** por cable USB, desde Chrome (sin ADB ni SDK). |
 | **APK** | El archivo de instalación de una app de Android. AI Studio lo genera e instala por ti con "Install on Device". |
-| **AI Chips** | Servicios de Google que agregas sin configurar (por ejemplo, **Nano Banana** para generar imágenes). |
+| **Nano Banana** | El modelo de Google que **genera imágenes** desde un prompt. Vive en el **playground de AI Studio** (aparte de Build): generas la imagen ahí y luego la subes a tu app. |
 | **Firebase** | Servicios de Google para apps: base de datos, login y almacenamiento. Es el "backend". AI Studio lo configura solo (auto-provisioning). |
 | **Firestore** | La **base de datos** de Firebase, en la nube (por ejemplo, las cafeterías de "Ruta del Café" o las entradas de "Bitácora Visual"). |
 | **Authentication (Auth)** | El servicio de Firebase que verifica quién es el usuario. Usamos **Google Sign-In**. |

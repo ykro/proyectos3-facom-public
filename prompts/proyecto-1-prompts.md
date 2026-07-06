@@ -142,8 +142,8 @@ Categorías y color de badge (mapeo oficial): Para trabajar #3A6B7E (azul, texto
 **Modo oscuro.**
 > Agrega modo oscuro con botón para alternarlo, versiones oscuras coherentes de la paleta y contraste AA. No cambies la funcionalidad.
 
-**Ilustración e iconografía (Nano Banana).**
-> Genera con Nano Banana un ícono/ilustración de marca (una taza estilizada) y úsalo en el header y como imagen de respaldo cuando falte imagenUrl.
+**Ilustración e iconografía (imagen propia).**
+> Prepara **por tu cuenta** un ícono/ilustración de marca (una taza estilizada) —dibújalo, usa uno libre de derechos, o genéralo aparte (por ejemplo en el playground de AI Studio con Nano Banana)— y luego pídele a la app que lo use en el header y como imagen de respaldo cuando falte imagenUrl.
 
 **Estado vacío con personalidad.**
 > Rediseña el estado vacío del filtro ("No encontramos cafés en esta categoría… todavía") con un ícono/ilustración sencillo. Solo interfaz.

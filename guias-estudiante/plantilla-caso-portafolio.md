@@ -16,7 +16,7 @@ dirigiste a la IA), no solo el producto final.
 - **Nombre de la app:**
 - **Una línea (qué es y para quién):**
 - **Tu rol:** Diseñador-creador con IA (dirección de producto, UX/UI y prompting).
-- **Herramientas:** Google AI Studio, Firebase, (Nano Banana / AI Chips si aplica).
+- **Herramientas:** Google AI Studio, Firebase, (Nano Banana en el playground de AI Studio, si aplica).
 
 ## 1. Problema
 *(¿Qué necesidad o problema resuelve tu app? ¿Para quién? ¿Por qué importa?)*

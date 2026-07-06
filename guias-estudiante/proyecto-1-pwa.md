@@ -41,7 +41,7 @@ No necesitas teoría; solo estas palabras, en lenguaje llano:
 | **Iterar / refinar** | Mejorar el resultado con prompts sucesivos, un cambio a la vez, en lugar de pedir todo de golpe. |
 | **Checkpoint** | Un punto de guardado al que puedes regresar si un cambio sale mal (un "deshacer" de todo el proyecto). |
 | **Alucinación** | Cuando la IA inventa algo con seguridad pero está mal o no existe. Por eso siempre verificas el resultado en la vista previa. |
-| **AI Chips (Nano Banana)** | Servicios de Google que agregas sin configurar. **Nano Banana** genera imágenes (íconos, ilustraciones) desde un prompt. |
+| **Nano Banana** | El modelo de Google que **genera imágenes** (íconos, ilustraciones) desde un prompt. Vive en el **playground de AI Studio** (una sección aparte, no en Build): generas la imagen ahí y luego la subes a tu app. |
 | **Firebase / Firestore** | Los servicios de Google en la nube para tu app. **Firestore** es la base de datos (donde viven, por ejemplo, las cafeterías). AI Studio los configura solo. |
 
 ### 3. ¿Cómo hace la IA todo esto?
@@ -279,9 +279,10 @@ Dale más carácter al encabezado: conviértelo en un hero con el nombre "Ruta d
 Agrega un modo oscuro con un botón para alternarlo. Define versiones oscuras coherentes de la paleta (fondos oscuros, texto claro, acentos legibles) y respeta el contraste AA. No cambies la funcionalidad.
 ```
 
-**Ilustración e iconografía (Nano Banana).**
+**Ilustración e iconografía.**
+Crea la imagen **aparte** —puedes generarla en el **playground de AI Studio con Nano Banana** o usar una imagen propia— y luego súbela a tu app con este prompt:
 ```
-Genera con Nano Banana un pequeño ícono/ilustración de marca (por ejemplo, una taza estilizada) y úsalo en el header y como imagen de respaldo cuando un café no tenga imagenUrl. Mantén el estilo coherente con la paleta.
+Usa esta imagen que subí (un pequeño ícono/ilustración de marca, por ejemplo una taza estilizada) en el header y como imagen de respaldo cuando un café no tenga imagenUrl. Mantén el estilo coherente con la paleta.
 ```
 
 **Estado vacío con personalidad.**

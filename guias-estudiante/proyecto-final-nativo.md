@@ -248,7 +248,7 @@ Cuando AI Studio detecte que necesitas autenticación, te ofrecerá **"Enable Fi
 - Aplica la paleta (#6D2E46, #C84B31, #E3B23C, #FDF6EC, #2B2B2B) de forma consistente en TopAppBar, botones y status bar.
 ```
 
-> *Tip de AI Chips: si necesitas una imagen para el ícono o el splash, genérala con **Nano Banana** y pídele a la IA que la use.*
+> *Tip: si necesitas una imagen para el ícono o el splash, créala **aparte** (por ejemplo, en el **playground de AI Studio con Nano Banana**) o usa una imagen propia, y luego súbela para que la IA la use.*
 
 **Paso 16.** Revisa (o instala) y verifica el ícono y el splash. Toma una captura final para tu portafolio.
 

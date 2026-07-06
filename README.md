@@ -1,8 +1,8 @@
 # Proyectos III — Diseño de aplicaciones móviles
 
-Material completo del curso **Proyectos III — Diseño de aplicaciones móviles**, de la **Licenciatura en Comunicación y Diseño** de la **Universidad Galileo**. Docente: **Adrián Catalán**.
+Material del curso **Proyectos III — Diseño de aplicaciones móviles**, de la **Licenciatura en Comunicación y Diseño** de la **Universidad Galileo**. Docente: **Adrián Catalán**.
 
-Audiencia: estudiantes de **Comunicación y Diseño**, **no programadores**. En este curso construyen aplicaciones móviles reales **sin escribir código**, dirigiendo a la inteligencia artificial en español. **Todo se hace desde el navegador, en Google AI Studio** — tanto la app web instalable (PWA) como la app nativa de Android.
+Este repositorio es el **material para estudiantes**. Aquí construyes aplicaciones móviles reales **sin escribir código**, dirigiendo a la inteligencia artificial en español. **Todo se hace desde el navegador, en Google AI Studio** — tanto la app web instalable (PWA) como la app nativa de Android.
 
 ---
 
@@ -13,7 +13,7 @@ El curso es en línea, con **10 sesiones de 90 minutos**, una por semana, durant
 A lo largo del trimestre construyes **dos aplicaciones móviles**:
 
 1. **Proyecto 1 — PWA (Progressive Web App).** Una aplicación web instalable en el teléfono, construida en **Google AI Studio Build mode**. La app de referencia es **"Ruta del Café"**, una guía de cafés de especialidad de Guatemala.
-2. **Proyecto Final — App nativa Android.** Una aplicación nativa construida **también en Google AI Studio** (que genera apps nativas con **Kotlin** y **Jetpack Compose**), con vista previa en el emulador integrado del navegador. La app de referencia es **"Bitácora Visual"**, un diario visual privado donde entras con Google, capturas fotos que te inspiran con la **cámara** del teléfono y las guardas por usuario en Firebase.
+2. **Proyecto Final — App nativa Android.** Una aplicación nativa construida **también en Google AI Studio** (que genera apps nativas con **Kotlin** y **Jetpack Compose**), con vista previa en el emulador integrado del navegador. La app de referencia es **"Bitácora Visual"**, un diario visual privado donde entras con Google, capturas fotos con la **cámara** del teléfono y las guardas por usuario en Firebase.
 
 En ambos proyectos sigues primero la guía con la **app de referencia** y luego aplicas lo aprendido a **tu propia idea de app**, que es lo que entregas y se evalúa.
 
@@ -37,20 +37,19 @@ En ambos proyectos sigues primero la guía con la **app de referencia** y luego 
 | Herramienta | Para qué sirve |
 |-------------|----------------|
 | **Google AI Studio Build mode** | Construir **la PWA y la app nativa de Android** desde el navegador. Genera apps React + Tailwind (web) y Kotlin + Jetpack Compose (nativa). Modelo por defecto: **Gemini 3.5 Flash**. |
-| **AI Chips** (Nano Banana, etc.) | Agregar servicios de Google sin configuración (por ejemplo, generar imágenes con Nano Banana). |
 | **Emulador del navegador + "Install on Device"** | Ver la app nativa en un emulador de Android dentro del navegador, e instalarla en tu teléfono por USB con un clic (WebUSB), sin instalar nada. |
 | **Firebase** | El backend: base de datos (**Firestore**), inicio de sesión (**Authentication** con Google Sign-In) y almacenamiento de archivos (**Storage**). AI Studio lo configura automáticamente (auto-provisioning). |
 | **Cloud Run** | El servicio que publica tu PWA en internet con una dirección propia. |
 
 No necesitas saber programar. Tu trabajo es **diseñar** la app —con criterio de UI/UX— y **dirigir a la IA** con instrucciones claras en español.
 
+> Si necesitas una imagen (un ícono, una ilustración de marca), puedes generarla **aparte** en el **playground de AI Studio** con el modelo de imágenes **Nano Banana** —o usar una imagen propia— y luego usarla en tu app. Es un recurso opcional, separado del flujo de construir la app.
+
 > Los prompts del curso separan siempre la **Funcionalidad (qué hace)** de la **Interfaz (UI/UX — cómo se ve y se siente)**, e incluyen prompts de **personalización de interfaz** para que hagas cada app tuya.
 
 ---
 
 ## Cómo usar este material
-
-### Para estudiantes
 
 1. Sigue la sesión **en vivo** con el docente (el curso es en línea y en vivo; no hay videos grabados).
 2. Si es tu primera vez, empieza por `guias-estudiante/s0-bienvenida-y-configuracion.md`.
@@ -60,54 +59,34 @@ No necesitas saber programar. Tu trabajo es **diseñar** la app —con criterio 
 4. Copia los prompts de la guía y pégalos en AI Studio.
 5. Verifica el resultado en cada paso (vista previa).
 6. Cuando termines la app de referencia, ve a la sección **"Tu proyecto"** al final de cada guía y aplica lo aprendido a **tu propia idea de app**. Eso es lo que entregas.
-7. El docente aplica un breve **quiz de verificación** al cerrar cada unidad (lo comparte el docente; no está en el material del estudiante).
-
-### Para el docente
-
-- El detalle sesión por sesión está en `programa/` y en `instrucciones-docente/`.
-- Las guías de `guias-estudiante/` son la fuente principal: cada una tiene los prompts inlineados, listos para copiar y pegar en clase.
-- Cada sesión de contenido incluye una **"Demo del docente"**: una mini-app distinta que el docente construye en vivo para ilustrar el concepto del día, para dar variedad sin perder profundidad.
-- Las presentaciones están en `slides/`.
-- Los proyectos de referencia terminados (Ruta del Café y Bitácora Visual) están en `proyectos-referencia/` solo como apoyo; los estudiantes no los copian, los reconstruyen con la IA.
-- Las notas pedagógicas, rúbricas y guías de evaluación están en `instrucciones-docente/`.
 
 ---
 
-## Estructura de directorios
+## Qué hay en este repositorio
 
 ```
 proyectos3-facom/
-  README.md                    -- Este archivo (overview del curso)
-  programa/                    -- Programa (.md fuente + .docx), material-por-clase,
-                                  especificacion-asignaciones (spec de toda la evaluacion),
-                                  material-de-apoyo-links (indice de que subir al aula)
-  guias-estudiante/            -- Guias paso a paso para los estudiantes
-    s0-bienvenida-y-configuracion.md
-    proyecto-1-pwa.md          -- PWA "Ruta del Cafe" (semanas 1-3)
-    proyecto-final-nativo.md   -- App nativa "Bitacora Visual" (semanas 4, 6, 7)
-    plantilla-ficha-tienda.md / plantilla-caso-portafolio.md / plantilla-pitch.md
-    img/                       -- Capturas del flujo de AI Studio (Build, Enable Firebase, emulador)
-    pdf/                       -- Las 3 guias en PDF con marca (con capturas incluidas)
-  prompts/                     -- Prompts por proyecto + prompts-demos-docente (las 6 demos del docente)
-  quiz/                        -- Preguntas de verificacion por unidad (material del docente)
-  slides/                      -- 8 presentaciones .pptx (sesiones 1-4, 6-9); generar_slides.py + assets/
-  demos/                       -- Mini-apps que el docente construye en vivo (mock-up + captura real)
-  proyectos-referencia/        -- Apps de referencia terminadas + screenshots (apoyo, no las copian)
-  instrucciones-docente/       -- Guion sesion por sesion, rubricas, guion de video de la clase 1
-  examenes/                    -- Examenes escritos (parcial + final) con clave (material del docente)
+  README.md               -- Este archivo (overview del curso)
+  guias-estudiante/        -- Guías paso a paso (la fuente principal: prompts listos para copiar)
+  prompts/                 -- Bancos de prompts por proyecto (inicial + refinamientos + personalización)
+  slides/                  -- Presentaciones del curso (.pptx), por sesión
+  programa/                -- El programa del curso (temario, evaluación, cronograma)
+  proyectos-referencia/    -- Cómo se ven las apps de referencia terminadas (capturas)
 ```
 
-> **Este repositorio es el material completo del curso.** El docente comparte el enlace en la primera clase; todo lo que se usa —guías, prompts, slides, referencias, plantillas— vive aquí. Los estudiantes construyen sus apps en **Google AI Studio** desde el navegador y usan este repo como referencia y material de apoyo.
+Cada carpeta tiene su propio `README.md` explicando qué contiene.
+
+> **Este repositorio es tu material de referencia.** El docente comparte el enlace en la primera clase. Tú construyes tus apps en **Google AI Studio** desde el navegador y usas este repo como guía y apoyo.
 
 ---
 
-## Requisitos para estudiantes
+## Requisitos
 
 - Computadora con navegador web (**Chrome** recomendado).
-- **Cuenta de Google (Gmail).** Si no tienes una, créala gratis en [accounts.google.com](https://accounts.google.com).
+- **Cuenta de Google (Gmail).** Si no tienes una, créala gratis en [accounts.google.com](https://accounts.google.com). Se recomienda una cuenta **personal** (las institucionales suelen bloquear estos servicios).
 - Acceso a **Google AI Studio**: [aistudio.google.com](https://aistudio.google.com).
 - Para el **Proyecto 1 (PWA)** eso es todo: no necesitas instalar nada.
-- Para el **Proyecto Final (app nativa)** tampoco instalas nada: se construye y se ve en el navegador. Solo si quieres **probarla en un teléfono real** (recomendado para la cámara) necesitas un **teléfono Android** con el **modo de desarrollador** y la **depuración por USB** activados y un **cable USB**; AI Studio la instala desde Chrome con "Install on Device".
+- Para el **Proyecto Final (app nativa)** tampoco instalas nada: se construye y se ve en el navegador. Solo si quieres **probarla en un teléfono real** (recomendado para la cámara) necesitas un **teléfono Android** con **depuración por USB** activada y un **cable USB**; AI Studio la instala desde Chrome con "Install on Device".
 
 ---
 
@@ -117,6 +96,5 @@ proyectos3-facom/
 - Los prompts están diseñados para **copiarse y pegarse tal cual** en AI Studio, y separan **Funcionalidad** de **Interfaz (UI/UX)**.
 - Firebase se configura **automáticamente** (auto-provisioning) desde AI Studio. No necesitas entrar a la consola de Firebase.
 - Este curso usa siempre el término **"desarrollo de software asistido por IA"**. Nunca usamos el término "vibe coding".
-- Las guías del estudiante están también en **PDF con marca** en `guias-estudiante/pdf/` (se regeneran con `_build_pdfs.py`).
-- La **evaluación** combina laboratorios/tareas, proyectos y dos exámenes; cada examen es **100 % escrito en línea (teoría + práctica), sin defensa**. Los proyectos se entregan en línea y se evalúan dentro de *Proyectos*. Los quizzes y los exámenes (con claves) son material del docente.
-- **Entrega en dos repos:** este directorio es el master de autoría; el material se divide en un repo **público** (todo menos quizzes/exámenes) y uno **privado** (quizzes + exámenes con claves). Ver `CLAUDE.md`.
+- Las guías están también en **PDF con marca** en `guias-estudiante/pdf/`.
+- **Evaluación:** combina tareas/investigaciones, laboratorios, proyectos y dos exámenes; cada examen es **100 % escrito en línea (teoría + práctica), sin defensa**. Los proyectos se entregan en línea y se evalúan dentro de *Proyectos*. El detalle está en `programa/`.
