@@ -69,6 +69,7 @@ proyectos3-facom/
   README.md               -- Este archivo (overview del curso)
   guias-estudiante/        -- Guías paso a paso (la fuente principal: prompts listos para copiar)
   prompts/                 -- Bancos de prompts por proyecto (inicial + refinamientos + personalización)
+  asignaciones/            -- Un Word por cada tarea y laboratorio: qué hacer, capturas y rúbrica
   slides/                  -- Presentaciones del curso (.pptx), por sesión
   programa/                -- El programa del curso (temario, evaluación, cronograma)
   proyectos-referencia/    -- Cómo se ven las apps de referencia terminadas (capturas)
@@ -97,4 +98,4 @@ Cada carpeta tiene su propio `README.md` explicando qué contiene.
 - Firebase se configura **automáticamente** (auto-provisioning) desde AI Studio. No necesitas entrar a la consola de Firebase.
 - Este curso usa siempre el término **"desarrollo de software asistido por IA"**. Nunca usamos el término "vibe coding".
 - Las guías están también en **PDF con marca** en `guias-estudiante/pdf/`.
-- **Evaluación:** combina tareas/investigaciones, laboratorios, proyectos y dos exámenes; cada examen es **100 % escrito en línea (teoría + práctica), sin defensa**. Los proyectos se entregan en línea y se evalúan dentro de *Proyectos*. El detalle está en `programa/`.
+- **Evaluación:** combina tareas/investigaciones, laboratorios, proyectos y dos exámenes; cada examen es **100 % escrito en línea (teoría + práctica), sin defensa**. Los proyectos se entregan en línea y se evalúan dentro de *Proyectos*. El detalle está en `programa/`; el documento de cada tarea y laboratorio (con su rúbrica) está en `asignaciones/`.
