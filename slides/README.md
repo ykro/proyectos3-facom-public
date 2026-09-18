@@ -5,5 +5,6 @@ Las **presentaciones del curso** en formato `.pptx`, una por sesión de contenid
 ## Qué contiene
 
 - `sesion-01.pptx` … `sesion-09.pptx` — un deck por sesión de contenido (sesiones 1–4 y 6–9).
+- `stitch-librerias-y-recursos.pdf` — deck de apoyo sobre **Stitch** (stitch.withgoogle.com) y librerías de ejemplos y recursos de diseño: animación, componentes de interfaz, íconos, exportar de Stitch a Figma y código vs. `.zip`.
 
 > Las sesiones 5 y 10 son exámenes / Demo Day y no tienen deck. Cada deck sigue la **paleta vino** del curso e incluye diagramas, estadísticas con fuente y capturas reales de las apps.

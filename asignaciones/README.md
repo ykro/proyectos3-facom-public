@@ -24,7 +24,24 @@ Un documento Word por cada **tarea**, **investigación** y **laboratorio** del c
 | `laboratorio-5-login-datos.docx` | 6 | Login con Google + entradas privadas por usuario |
 | `laboratorio-6-camara-pulido.docx` | 7 | Cámara (o galería), ícono y splash con tu marca |
 
-En ambas categorías, **cada entrega vale lo mismo** (reparto equitativo de los puntos de la categoría). Las entregas de proyecto se manejan aparte; los quizzes aplicados están en `quiz/` y el Proyecto de Curso en `otros/`.
+En ambas categorías, **cada entrega vale lo mismo** (reparto equitativo de los puntos de la categoría). Las entregas de proyecto se manejan aparte (ver abajo); los quizzes aplicados están en `quiz/`.
 
-> Las sesiones 5 y 10 no tienen documento aquí: son el Examen Parcial (+ entrega del Proyecto 1) y el Examen Final (+ Demo Day y entrega del Proyecto Final). Las rúbricas de entrega de los proyectos las comparte el docente.
+> Las sesiones 5 y 10 no tienen documento de tarea o laboratorio: son el Examen Parcial (+ entrega del Proyecto 1) y el Examen Final (+ Demo Day y entrega del Proyecto Final). Los exámenes aplicados están en `examenes/`.
+
+## Proyecto de Curso y caso de portafolio + pitch
+
+| Documento | Qué es |
+|-----------|--------|
+| `proyecto-de-curso.pdf` | Especificación del **Proyecto de Curso**: una app nueva y propia (en parejas), con sus ocho etapas —concepto, identidad visual, modelo de datos, interfaz, autenticación con Firebase, PWA instalable y publicación, lanzamiento— y lo que se entrega: un PDF por etapas y un pitch con demo en vivo |
+| `caso-portafolio-pitch-especificacion.pdf` | Qué debe tener la entrega del **caso de portafolio + pitch**: problema, proceso, capturas y script del pitch con marcas de tiempo (gancho, demo, proceso, cierre) |
+
+## Ejemplos de entrega (`ejemplos/`)
+
+| Archivo | Qué es |
+|---------|--------|
+| `ejemplos/caso-portafolio-pitch-ejemplos-duolingo-waze.pdf` | Dos casos de portafolio + pitch resueltos (Duolingo y Waze) con la estructura exacta de la entrega |
+| `ejemplos/deck-pitch-ejemplo-duolingo.pptx` / `ejemplos/deck-pitch-ejemplo-waze.pptx` | Los decks de pitch de esos dos casos (problema → demo → proceso → cierre) |
+| `ejemplos/store-listing-ejemplo-splitwise.pdf` | Ficha de tienda de ejemplo: título con palabra clave, descripción corta y larga, categoría y capturas |
+
+> Las plantillas en Markdown de la ficha de tienda, el caso de portafolio y el pitch están en `guias-estudiante/`.
 

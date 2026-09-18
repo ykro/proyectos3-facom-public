@@ -2,7 +2,7 @@
 
 Material del curso **Proyectos III — Diseño de aplicaciones móviles**, de la **Licenciatura en Comunicación y Diseño** de la **Universidad Galileo**. Docente: **Adrián Catalán**.
 
-> **Curso finalizado (trimestre julio–septiembre 2026).** Este repositorio queda como material de referencia. Al cierre del curso se publicaron también las **evaluaciones aplicadas** —exámenes parcial y final con su clave, y los quizzes de cada tramo— en `examenes/` y `quiz/`, además del material de apoyo entregado en clase en `otros/`.
+> **Curso finalizado (trimestre julio–septiembre 2026).** Este repositorio queda como material de referencia. Al cierre del curso se publicaron también las **evaluaciones aplicadas** —exámenes parcial y final con su clave, y los quizzes de cada tramo— en `examenes/` y `quiz/`. La especificación del Proyecto de Curso, la del caso de portafolio + pitch y sus ejemplos están en `asignaciones/`.
 
 Este repositorio es el **material para estudiantes**. Aquí construyes aplicaciones móviles reales **sin escribir código**, dirigiendo a la inteligencia artificial en español. **Todo se hace desde el navegador, en Google AI Studio** — tanto la app web instalable (PWA) como la app nativa de Android.
 
@@ -71,13 +71,13 @@ proyectos3-facom/
   README.md               -- Este archivo (overview del curso)
   guias-estudiante/        -- Guías paso a paso (la fuente principal: prompts listos para copiar)
   prompts/                 -- Bancos de prompts por proyecto (inicial + refinamientos + personalización)
-  asignaciones/            -- Un Word por cada tarea y laboratorio: qué hacer, capturas y rúbrica
-  slides/                  -- Presentaciones del curso (.pptx), por sesión
+  asignaciones/            -- Un Word por cada tarea y laboratorio (qué hacer, capturas y rúbrica),
+                              el Proyecto de Curso, el caso de portafolio + pitch y sus ejemplos
+  slides/                  -- Presentaciones del curso (.pptx), por sesión, + deck de Stitch y recursos
   programa/                -- El programa del curso (temario, evaluación, cronograma)
   proyectos-referencia/    -- Cómo se ven las apps de referencia terminadas (capturas)
   examenes/                -- Exámenes parcial y final aplicados (variantes A/B con clave)
   quiz/                    -- Quizzes de verificación de cada tramo, con hoja de respuestas
-  otros/                   -- Material de apoyo entregado en clase (proyecto de curso, portafolio + pitch, ejemplos)
 ```
 
 Cada carpeta tiene su propio `README.md` explicando qué contiene.
