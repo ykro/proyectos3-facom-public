@@ -24,7 +24,7 @@ Un documento Word por cada **tarea**, **investigación** y **laboratorio** del c
 | `laboratorio-5-login-datos.docx` | 6 | Login con Google + entradas privadas por usuario |
 | `laboratorio-6-camara-pulido.docx` | 7 | Cámara (o galería), ícono y splash con tu marca |
 
-En ambas categorías, **cada entrega vale lo mismo** (reparto equitativo de los puntos de la categoría). Los quizzes y las entregas de proyecto se manejan aparte.
+En ambas categorías, **cada entrega vale lo mismo** (reparto equitativo de los puntos de la categoría). Las entregas de proyecto se manejan aparte; los quizzes aplicados están en `quiz/` y el Proyecto de Curso en `otros/`.
 
 > Las sesiones 5 y 10 no tienen documento aquí: son el Examen Parcial (+ entrega del Proyecto 1) y el Examen Final (+ Demo Day y entrega del Proyecto Final). Las rúbricas de entrega de los proyectos las comparte el docente.
 
